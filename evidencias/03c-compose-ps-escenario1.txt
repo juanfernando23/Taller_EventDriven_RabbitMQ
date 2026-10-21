@@ -1,0 +1,23 @@
+# docker compose ps -a (proyecto taller-escenario-1)
+NAME                                       IMAGE                                    COMMAND                  SERVICE               CREATED         STATUS         PORTS
+taller-escenario-1-cons-auditoria-1        taller-escenario-1-cons-auditoria        "consumidor"             cons-auditoria        9 minutes ago   Up 9 minutes   
+taller-escenario-1-cons-facturacion-1      taller-escenario-1-cons-facturacion      "docker-entrypoint.s…"   cons-facturacion      9 minutes ago   Up 9 minutes   
+taller-escenario-1-cons-inventario-1       taller-escenario-1-cons-inventario       "python -u consumido…"   cons-inventario       9 minutes ago   Up 9 minutes   
+taller-escenario-1-cons-notificaciones-1   taller-escenario-1-cons-notificaciones   "/__cacert_entrypoin…"   cons-notificaciones   9 minutes ago   Up 9 minutes   
+taller-escenario-1-prod-inventario-1       taller-escenario-1-prod-inventario       "productor"              prod-inventario       9 minutes ago   Up 9 minutes   
+taller-escenario-1-prod-pagos-1            taller-escenario-1-prod-pagos            "docker-entrypoint.s…"   prod-pagos            9 minutes ago   Up 9 minutes   
+taller-escenario-1-prod-pedidos-1          taller-escenario-1-prod-pedidos          "python -u productor…"   prod-pedidos          9 minutes ago   Up 9 minutes   
+taller-escenario-1-prod-usuarios-1         taller-escenario-1-prod-usuarios         "/__cacert_entrypoin…"   prod-usuarios         9 minutes ago   Up 9 minutes   
+taller-escenario-1-rabbitmq-1              rabbitmq:3-management                    "docker-entrypoint.s…"   rabbitmq              9 minutes ago   Up 9 minutes   4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp
+
+# docker ps (filtrado por proyecto)
+NAMES                                      IMAGE                                    STATUS         PORTS
+taller-escenario-1-cons-notificaciones-1   taller-escenario-1-cons-notificaciones   Up 9 minutes   
+taller-escenario-1-prod-usuarios-1         taller-escenario-1-prod-usuarios         Up 9 minutes   
+taller-escenario-1-cons-inventario-1       taller-escenario-1-cons-inventario       Up 9 minutes   
+taller-escenario-1-cons-facturacion-1      taller-escenario-1-cons-facturacion      Up 9 minutes   
+taller-escenario-1-prod-pedidos-1          taller-escenario-1-prod-pedidos          Up 9 minutes   
+taller-escenario-1-prod-inventario-1       taller-escenario-1-prod-inventario       Up 9 minutes   
+taller-escenario-1-rabbitmq-1              rabbitmq:3-management                    Up 9 minutes   4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp
+taller-escenario-1-prod-pagos-1            taller-escenario-1-prod-pagos            Up 9 minutes   
+taller-escenario-1-cons-auditoria-1        taller-escenario-1-cons-auditoria        Up 9 minutes   

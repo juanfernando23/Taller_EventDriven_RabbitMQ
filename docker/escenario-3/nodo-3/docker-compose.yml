@@ -1,0 +1,15 @@
+# Escenario 3 - Nodo 3: broker RabbitMQ. Los productores y consumidores corren en los nodos 1 y 2.
+# Uso: docker compose up -d
+
+name: taller-escenario-3-nodo-3
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-taller}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS:-taller}
+    restart: unless-stopped

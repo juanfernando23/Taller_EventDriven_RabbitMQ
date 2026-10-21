@@ -1,0 +1,75 @@
+# Escenario 2 - Nodo 1: productores y consumidores. El broker corre en el nodo 2.
+# Uso: RABBITMQ_HOST=<IP del nodo 2> docker compose up -d --build
+
+name: taller-escenario-2-nodo-1
+
+x-rabbitmq-env: &rabbitmq-env
+  RABBITMQ_HOST: ${RABBITMQ_HOST:?definir la IP del nodo con el broker}
+  RABBITMQ_PORT: "5672"
+  RABBITMQ_USER: ${RABBITMQ_USER:-taller}
+  RABBITMQ_PASS: ${RABBITMQ_PASS:-taller}
+
+services:
+  # Productores
+
+  prod-pedidos:
+    build: ../../../productores/python
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: prod-pedidos
+      INTERVALO_SEGUNDOS: "3"
+    restart: unless-stopped
+
+  prod-pagos:
+    build: ../../../productores/nodejs
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: prod-pagos
+      INTERVALO_SEGUNDOS: "3"
+    restart: unless-stopped
+
+  prod-inventario:
+    build: ../../../productores/go
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: prod-inventario
+      INTERVALO_SEGUNDOS: "3"
+    restart: unless-stopped
+
+  prod-usuarios:
+    build: ../../../productores/java
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: prod-usuarios
+      INTERVALO_SEGUNDOS: "3"
+    restart: unless-stopped
+
+  # Consumidores
+
+  cons-facturacion:
+    build: ../../../consumidores/nodejs
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: cons-facturacion
+    restart: unless-stopped
+
+  cons-inventario:
+    build: ../../../consumidores/python
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: cons-inventario
+    restart: unless-stopped
+
+  cons-notificaciones:
+    build: ../../../consumidores/java
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: cons-notificaciones
+    restart: unless-stopped
+
+  cons-auditoria:
+    build: ../../../consumidores/go
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: cons-auditoria
+    restart: unless-stopped

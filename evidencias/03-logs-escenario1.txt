@@ -1,0 +1,412 @@
+cons-notificaciones-1  | 2026-10-21T02:23:47.238477369Z SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+cons-notificaciones-1  | 2026-10-21T02:23:47.238534754Z SLF4J: Defaulting to no-operation (NOP) logger implementation
+cons-notificaciones-1  | 2026-10-21T02:23:47.239180943Z SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+cons-notificaciones-1  | 2026-10-21T02:23:48.337824569Z [cons-notificaciones] broker no disponible (Connection refused), reintentando en 2 s
+cons-notificaciones-1  | 2026-10-21T02:23:50.337640107Z [cons-notificaciones] broker no disponible (Connection refused), reintentando en 2 s
+cons-notificaciones-1  | 2026-10-21T02:23:52.339465469Z [cons-notificaciones] broker no disponible (Connection refused), reintentando en 2 s
+cons-notificaciones-1  | 2026-10-21T02:23:54.340442048Z [cons-notificaciones] broker no disponible (Connection refused), reintentando en 2 s
+cons-notificaciones-1  | 2026-10-21T02:23:56.341462065Z [cons-notificaciones] broker no disponible (Connection refused), reintentando en 2 s
+cons-notificaciones-1  | 2026-10-21T02:23:58.425110442Z [cons-notificaciones] esperando eventos en cola.notificaciones con pago.aprobado, usuario.registrado
+cons-notificaciones-1  | 2026-10-21T02:23:59.607483633Z [cons-notificaciones] recibido usuario.registrado | {"id":"4b5d3163-efb8-4dcf-9aef-e58d0c81649d","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:23:59.597584246Z","datos":{"usuario_id":1,"email":"usuario1@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:02.610600872Z [cons-notificaciones] recibido usuario.registrado | {"id":"e5048dba-fa4a-4b55-831d-0e5528f4c1f9","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:02.604732377Z","datos":{"usuario_id":2,"email":"usuario2@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:02.877434210Z [cons-notificaciones] recibido pago.aprobado | {"id":"949df308-4280-4e15-9ae4-fbc4936159fc","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:02.872Z","datos":{"pago_id":1,"pedido_id":77,"monto":384.94}}
+cons-notificaciones-1  | 2026-10-21T02:24:05.609088396Z [cons-notificaciones] recibido usuario.registrado | {"id":"89b8323e-08f8-457b-bfad-18e4323f31e1","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:05.606728348Z","datos":{"usuario_id":3,"email":"usuario3@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:05.877657865Z [cons-notificaciones] recibido pago.aprobado | {"id":"6a00b02d-0083-4a59-844a-78cf3bb98ce0","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:05.874Z","datos":{"pago_id":2,"pedido_id":26,"monto":170.46}}
+cons-notificaciones-1  | 2026-10-21T02:24:08.610461638Z [cons-notificaciones] recibido usuario.registrado | {"id":"34e5e661-5451-4789-9477-41ee375400e0","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:08.607635227Z","datos":{"usuario_id":4,"email":"usuario4@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:08.937189515Z [cons-notificaciones] recibido pago.aprobado | {"id":"69f2d0b1-e1aa-4709-9150-a2d3e5dd7506","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:08.874Z","datos":{"pago_id":3,"pedido_id":79,"monto":231.19}}
+cons-notificaciones-1  | 2026-10-21T02:24:11.612355558Z [cons-notificaciones] recibido usuario.registrado | {"id":"0457212b-d500-4107-8d64-44407cff57da","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:11.608684741Z","datos":{"usuario_id":5,"email":"usuario5@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:11.880251276Z [cons-notificaciones] recibido pago.aprobado | {"id":"74703da1-ec53-4a60-9d26-8afa2201beb7","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:11.877Z","datos":{"pago_id":4,"pedido_id":3,"monto":194.25}}
+cons-notificaciones-1  | 2026-10-21T02:24:14.610577232Z [cons-notificaciones] recibido usuario.registrado | {"id":"1a8bee1e-bc51-424a-bb70-da7d1f1bf78c","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:14.608659505Z","datos":{"usuario_id":6,"email":"usuario6@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:14.882223715Z [cons-notificaciones] recibido pago.aprobado | {"id":"e612783d-0a9e-4d1a-b3d0-299c6997a709","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:14.880Z","datos":{"pago_id":5,"pedido_id":94,"monto":27.58}}
+cons-notificaciones-1  | 2026-10-21T02:24:17.611443104Z [cons-notificaciones] recibido usuario.registrado | {"id":"ac52a39c-4ca9-4c64-a469-4a22dfff18bd","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:17.609487263Z","datos":{"usuario_id":7,"email":"usuario7@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:17.885097906Z [cons-notificaciones] recibido pago.aprobado | {"id":"fe252e1a-dad2-4211-9fe4-21b675a40f87","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:17.883Z","datos":{"pago_id":6,"pedido_id":14,"monto":476.37}}
+cons-notificaciones-1  | 2026-10-21T02:24:20.612395428Z [cons-notificaciones] recibido usuario.registrado | {"id":"4edf8d74-92df-4fe4-877c-714a624b1108","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:20.610319344Z","datos":{"usuario_id":8,"email":"usuario8@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:20.888809601Z [cons-notificaciones] recibido pago.aprobado | {"id":"29989ce4-a65e-408d-a49b-2112bee3326b","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:20.886Z","datos":{"pago_id":7,"pedido_id":38,"monto":390.65}}
+cons-notificaciones-1  | 2026-10-21T02:24:23.613415186Z [cons-notificaciones] recibido usuario.registrado | {"id":"85fcedbd-0bcf-4cb6-a8fd-5a06d343e811","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T02:24:23.611356496Z","datos":{"usuario_id":9,"email":"usuario9@ejemplo.com"}}
+cons-notificaciones-1  | 2026-10-21T02:24:23.892054727Z [cons-notificaciones] recibido pago.aprobado | {"id":"923cebcb-14a0-4fe2-85d1-05c73ef2ecd3","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T02:24:23.889Z","datos":{"pago_id":8,"pedido_id":8,"monto":232.18}}
+prod-inventario-1      | 2026-10-21T02:23:47.851489784Z 2026/10/21 02:23:47 [prod-inventario] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+prod-inventario-1      | 2026-10-21T02:23:49.853191081Z 2026/10/21 02:23:49 [prod-inventario] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+prod-inventario-1      | 2026-10-21T02:23:51.854679819Z 2026/10/21 02:23:51 [prod-inventario] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+prod-inventario-1      | 2026-10-21T02:23:53.862327465Z 2026/10/21 02:23:53 [prod-inventario] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+prod-inventario-1      | 2026-10-21T02:23:55.865238370Z 2026/10/21 02:23:55 [prod-inventario] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+prod-inventario-1      | 2026-10-21T02:23:57.867062812Z 2026/10/21 02:23:57 [prod-inventario] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+prod-inventario-1      | 2026-10-21T02:23:59.873045317Z 2026/10/21 02:23:59 [prod-inventario] conectado a rabbitmq:5672, publicando 'inventario.actualizado' cada 3 s
+prod-inventario-1      | 2026-10-21T02:24:02.875044673Z 2026/10/21 02:24:02 [prod-inventario] publicado inventario.actualizado #1
+prod-inventario-1      | 2026-10-21T02:24:05.873659127Z 2026/10/21 02:24:05 [prod-inventario] publicado inventario.actualizado #2
+prod-inventario-1      | 2026-10-21T02:24:08.876095762Z 2026/10/21 02:24:08 [prod-inventario] publicado inventario.actualizado #3
+prod-inventario-1      | 2026-10-21T02:24:11.874666493Z 2026/10/21 02:24:11 [prod-inventario] publicado inventario.actualizado #4
+prod-inventario-1      | 2026-10-21T02:24:14.872088914Z 2026/10/21 02:24:14 [prod-inventario] publicado inventario.actualizado #5
+prod-inventario-1      | 2026-10-21T02:24:17.874179425Z 2026/10/21 02:24:17 [prod-inventario] publicado inventario.actualizado #6
+prod-inventario-1      | 2026-10-21T02:24:20.872237860Z 2026/10/21 02:24:20 [prod-inventario] publicado inventario.actualizado #7
+prod-inventario-1      | 2026-10-21T02:24:23.874536451Z 2026/10/21 02:24:23 [prod-inventario] publicado inventario.actualizado #8
+prod-pagos-1           | 2026-10-21T02:23:47.783518043Z [prod-pagos] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+prod-pagos-1           | 2026-10-21T02:23:49.787237746Z [prod-pagos] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+prod-pagos-1           | 2026-10-21T02:23:51.792757288Z [prod-pagos] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+prod-pagos-1           | 2026-10-21T02:23:53.797385764Z [prod-pagos] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+prod-pagos-1           | 2026-10-21T02:23:55.800167527Z [prod-pagos] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+prod-pagos-1           | 2026-10-21T02:23:57.803226904Z [prod-pagos] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+prod-pagos-1           | 2026-10-21T02:23:59.867852223Z [prod-pagos] conectado a rabbitmq:5672, publicando 'pago.aprobado' cada 3 s
+prod-pagos-1           | 2026-10-21T02:24:02.875096413Z [prod-pagos] publicado pago.aprobado #1
+prod-pagos-1           | 2026-10-21T02:24:05.875079215Z [prod-pagos] publicado pago.aprobado #2
+prod-pagos-1           | 2026-10-21T02:24:08.875549654Z [prod-pagos] publicado pago.aprobado #3
+prod-pagos-1           | 2026-10-21T02:24:11.878675697Z [prod-pagos] publicado pago.aprobado #4
+prod-pagos-1           | 2026-10-21T02:24:14.880964449Z [prod-pagos] publicado pago.aprobado #5
+prod-pagos-1           | 2026-10-21T02:24:17.883543760Z [prod-pagos] publicado pago.aprobado #6
+prod-pagos-1           | 2026-10-21T02:24:20.887300834Z [prod-pagos] publicado pago.aprobado #7
+prod-pagos-1           | 2026-10-21T02:24:23.890620163Z [prod-pagos] publicado pago.aprobado #8
+cons-auditoria-1       | 2026-10-21T02:23:50.175963737Z 2026/10/21 02:23:50 [cons-auditoria] broker no disponible (dial tcp: lookup rabbitmq on 127.0.0.11:53: no such host), reintentando en 2 s
+cons-auditoria-1       | 2026-10-21T02:23:52.179204460Z 2026/10/21 02:23:52 [cons-auditoria] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+cons-inventario-1      | 2026-10-21T02:23:50.180429090Z Traceback (most recent call last):
+prod-pedidos-1         | 2026-10-21T02:23:47.488958561Z [prod-pedidos] broker no disponible, reintentando en 2 s
+prod-pedidos-1         | 2026-10-21T02:23:49.491120581Z [prod-pedidos] broker no disponible, reintentando en 2 s
+prod-pedidos-1         | 2026-10-21T02:23:51.493591344Z [prod-pedidos] broker no disponible, reintentando en 2 s
+prod-pedidos-1         | 2026-10-21T02:23:53.496718966Z [prod-pedidos] broker no disponible, reintentando en 2 s
+prod-pedidos-1         | 2026-10-21T02:23:55.498639852Z [prod-pedidos] broker no disponible, reintentando en 2 s
+prod-pedidos-1         | 2026-10-21T02:23:57.500963471Z [prod-pedidos] broker no disponible, reintentando en 2 s
+prod-pedidos-1         | 2026-10-21T02:23:59.507227540Z [prod-pedidos] conectado a rabbitmq:5672, publicando 'pedido.creado' cada 3.0 s
+cons-inventario-1      | 2026-10-21T02:23:50.180484577Z   File "/app/consumidor.py", line 49, in <module>
+rabbitmq-1             | 2026-10-21T02:23:51.449155949Z 2026-10-21 02:23:51.442801+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+prod-pedidos-1         | 2026-10-21T02:23:59.507630844Z [prod-pedidos] publicado pedido.creado #1
+prod-pedidos-1         | 2026-10-21T02:24:02.509213461Z [prod-pedidos] publicado pedido.creado #2
+prod-pedidos-1         | 2026-10-21T02:24:05.509607542Z [prod-pedidos] publicado pedido.creado #3
+prod-pedidos-1         | 2026-10-21T02:24:08.510152251Z [prod-pedidos] publicado pedido.creado #4
+prod-pedidos-1         | 2026-10-21T02:24:11.510788544Z [prod-pedidos] publicado pedido.creado #5
+prod-pedidos-1         | 2026-10-21T02:24:14.510153289Z [prod-pedidos] publicado pedido.creado #6
+prod-pedidos-1         | 2026-10-21T02:24:17.510549980Z [prod-pedidos] publicado pedido.creado #7
+prod-pedidos-1         | 2026-10-21T02:24:20.511229306Z [prod-pedidos] publicado pedido.creado #8
+prod-pedidos-1         | 2026-10-21T02:24:23.511877101Z [prod-pedidos] publicado pedido.creado #9
+cons-auditoria-1       | 2026-10-21T02:23:54.181290540Z 2026/10/21 02:23:54 [cons-auditoria] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+cons-auditoria-1       | 2026-10-21T02:23:56.183230508Z 2026/10/21 02:23:56 [cons-auditoria] broker no disponible (dial tcp 172.21.0.10:5672: connect: connection refused), reintentando en 2 s
+cons-auditoria-1       | 2026-10-21T02:23:58.214875176Z 2026/10/21 02:23:58 [cons-auditoria] esperando eventos en cola.auditoria con '#'
+cons-auditoria-1       | 2026-10-21T02:23:59.509698218Z 2026/10/21 02:23:59 [cons-auditoria] recibido pedido.creado | id=d328b2d3-df9f-4d41-84b3-efe2c15014b0 | datos=map[cliente_id:43 pedido_id:1 total:296.91]
+cons-facturacion-1     | 2026-10-21T02:23:48.344052721Z [cons-facturacion] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+cons-facturacion-1     | 2026-10-21T02:23:50.349470315Z [cons-facturacion] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+cons-facturacion-1     | 2026-10-21T02:23:52.354513000Z [cons-facturacion] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+cons-facturacion-1     | 2026-10-21T02:23:54.358344463Z [cons-facturacion] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+cons-auditoria-1       | 2026-10-21T02:23:59.604656057Z 2026/10/21 02:23:59 [cons-auditoria] recibido usuario.registrado | id=4b5d3163-efb8-4dcf-9aef-e58d0c81649d | datos=map[email:usuario1@ejemplo.com usuario_id:1]
+cons-auditoria-1       | 2026-10-21T02:24:02.511400910Z 2026/10/21 02:24:02 [cons-auditoria] recibido pedido.creado | id=1ceb0876-01ac-4107-b8f4-efd7164858d6 | datos=map[cliente_id:44 pedido_id:2 total:145.91]
+cons-facturacion-1     | 2026-10-21T02:23:56.362046233Z [cons-facturacion] broker no disponible (connect ECONNREFUSED 172.21.0.10:5672), reintentando en 2 s
+cons-facturacion-1     | 2026-10-21T02:23:58.455260332Z [cons-facturacion] esperando eventos en cola.facturacion con pedido.creado, pago.aprobado
+cons-facturacion-1     | 2026-10-21T02:23:59.510804713Z [cons-facturacion] recibido pedido.creado | id=d328b2d3-df9f-4d41-84b3-efe2c15014b0 | datos={"pedido_id":1,"cliente_id":43,"total":296.91}
+cons-auditoria-1       | 2026-10-21T02:24:02.607624161Z 2026/10/21 02:24:02 [cons-auditoria] recibido usuario.registrado | id=e5048dba-fa4a-4b55-831d-0e5528f4c1f9 | datos=map[email:usuario2@ejemplo.com usuario_id:2]
+cons-auditoria-1       | 2026-10-21T02:24:02.875848318Z 2026/10/21 02:24:02 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-1-1792549442874072852 | datos=map[producto:SKU-013 stock:89]
+cons-auditoria-1       | 2026-10-21T02:24:02.876392405Z 2026/10/21 02:24:02 [cons-auditoria] recibido pago.aprobado | id=949df308-4280-4e15-9ae4-fbc4936159fc | datos=map[monto:384.94 pago_id:1 pedido_id:77]
+cons-auditoria-1       | 2026-10-21T02:24:05.510637569Z 2026/10/21 02:24:05 [cons-auditoria] recibido pedido.creado | id=bc02f7d2-a93c-4fd7-8ac9-b991e63cd89e | datos=map[cliente_id:63 pedido_id:3 total:375.73]
+cons-auditoria-1       | 2026-10-21T02:24:05.608198940Z 2026/10/21 02:24:05 [cons-auditoria] recibido usuario.registrado | id=89b8323e-08f8-457b-bfad-18e4323f31e1 | datos=map[email:usuario3@ejemplo.com usuario_id:3]
+cons-auditoria-1       | 2026-10-21T02:24:05.874564729Z 2026/10/21 02:24:05 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-2-1792549445873147533 | datos=map[producto:SKU-020 stock:24]
+cons-auditoria-1       | 2026-10-21T02:24:05.876001899Z 2026/10/21 02:24:05 [cons-auditoria] recibido pago.aprobado | id=6a00b02d-0083-4a59-844a-78cf3bb98ce0 | datos=map[monto:170.46 pago_id:2 pedido_id:26]
+cons-auditoria-1       | 2026-10-21T02:24:08.511104773Z 2026/10/21 02:24:08 [cons-auditoria] recibido pedido.creado | id=16282577-b969-43d5-a46b-8a1cba295772 | datos=map[cliente_id:99 pedido_id:4 total:76.88]
+cons-auditoria-1       | 2026-10-21T02:24:08.609384600Z 2026/10/21 02:24:08 [cons-auditoria] recibido usuario.registrado | id=34e5e661-5451-4789-9477-41ee375400e0 | datos=map[email:usuario4@ejemplo.com usuario_id:4]
+cons-auditoria-1       | 2026-10-21T02:24:08.876938694Z 2026/10/21 02:24:08 [cons-auditoria] recibido pago.aprobado | id=69f2d0b1-e1aa-4709-9150-a2d3e5dd7506 | datos=map[monto:231.19 pago_id:3 pedido_id:79]
+cons-auditoria-1       | 2026-10-21T02:24:08.877370567Z 2026/10/21 02:24:08 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-3-1792549448875656345 | datos=map[producto:SKU-020 stock:33]
+rabbitmq-1             | 2026-10-21T02:23:51.449308278Z 2026-10-21 02:23:51.448811+00:00 [notice] <0.254.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+rabbitmq-1             | 2026-10-21T02:23:51.449776662Z [38;5;87m2026-10-21 02:23:51.449553+00:00 [notice] <0.254.0> Logging: configured log handlers are now ACTIVE[0m
+cons-facturacion-1     | 2026-10-21T02:24:02.512238832Z [cons-facturacion] recibido pedido.creado | id=1ceb0876-01ac-4107-b8f4-efd7164858d6 | datos={"pedido_id":2,"cliente_id":44,"total":145.91}
+cons-auditoria-1       | 2026-10-21T02:24:11.511675301Z 2026/10/21 02:24:11 [cons-auditoria] recibido pedido.creado | id=b30043a2-3586-48ba-9d15-92f0511cc15a | datos=map[cliente_id:20 pedido_id:5 total:294.25]
+cons-auditoria-1       | 2026-10-21T02:24:11.610828963Z 2026/10/21 02:24:11 [cons-auditoria] recibido usuario.registrado | id=0457212b-d500-4107-8d64-44407cff57da | datos=map[email:usuario5@ejemplo.com usuario_id:5]
+cons-auditoria-1       | 2026-10-21T02:24:11.875526044Z 2026/10/21 02:24:11 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-4-1792549451874238397 | datos=map[producto:SKU-008 stock:58]
+rabbitmq-1             | 2026-10-21T02:23:51.459668167Z 2026-10-21 02:23:51.459191+00:00 [info] <0.254.0> ra: starting system quorum_queues[0m
+rabbitmq-1             | 2026-10-21T02:23:51.459758134Z 2026-10-21 02:23:51.459302+00:00 [info] <0.254.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@8234b44c2bef/quorum/rabbit@8234b44c2bef[0m
+cons-inventario-1      | 2026-10-21T02:23:50.180493885Z     main()
+cons-inventario-1      | 2026-10-21T02:23:50.180496715Z   File "/app/consumidor.py", line 36, in main
+cons-inventario-1      | 2026-10-21T02:23:50.180632671Z     conexion = conectar()
+prod-usuarios-1        | 2026-10-21T02:23:47.460617241Z SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+prod-usuarios-1        | 2026-10-21T02:23:47.460681391Z SLF4J: Defaulting to no-operation (NOP) logger implementation
+prod-usuarios-1        | 2026-10-21T02:23:47.460684933Z SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+cons-auditoria-1       | 2026-10-21T02:24:11.879586816Z 2026/10/21 02:24:11 [cons-auditoria] recibido pago.aprobado | id=74703da1-ec53-4a60-9d26-8afa2201beb7 | datos=map[monto:194.25 pago_id:4 pedido_id:3]
+cons-auditoria-1       | 2026-10-21T02:24:14.510984210Z 2026/10/21 02:24:14 [cons-auditoria] recibido pedido.creado | id=43b4149f-c4cb-4e87-b83a-e4dc476d47e1 | datos=map[cliente_id:18 pedido_id:6 total:365.04]
+cons-auditoria-1       | 2026-10-21T02:24:14.610236590Z 2026/10/21 02:24:14 [cons-auditoria] recibido usuario.registrado | id=1a8bee1e-bc51-424a-bb70-da7d1f1bf78c | datos=map[email:usuario6@ejemplo.com usuario_id:6]
+rabbitmq-1             | 2026-10-21T02:23:51.525366130Z 2026-10-21 02:23:51.524964+00:00 [info] <0.268.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+rabbitmq-1             | 2026-10-21T02:23:51.537917854Z 2026-10-21 02:23:51.537393+00:00 [info] <0.269.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+rabbitmq-1             | 2026-10-21T02:23:51.556338785Z [38;5;87m2026-10-21 02:23:51.555932+00:00 [notice] <0.274.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables[0m
+rabbitmq-1             | 2026-10-21T02:23:51.581173852Z 2026-10-21 02:23:51.580737+00:00 [info] <0.254.0> ra: starting system coordination[0m
+cons-auditoria-1       | 2026-10-21T02:24:14.872942866Z 2026/10/21 02:24:14 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-5-1792549454871709339 | datos=map[producto:SKU-011 stock:57]
+cons-auditoria-1       | 2026-10-21T02:24:14.881893778Z 2026/10/21 02:24:14 [cons-auditoria] recibido pago.aprobado | id=e612783d-0a9e-4d1a-b3d0-299c6997a709 | datos=map[monto:27.58 pago_id:5 pedido_id:94]
+cons-auditoria-1       | 2026-10-21T02:24:17.511334235Z 2026/10/21 02:24:17 [cons-auditoria] recibido pedido.creado | id=253e4c82-13ee-4577-9cae-f4eb50cc66a5 | datos=map[cliente_id:83 pedido_id:7 total:460.6]
+cons-auditoria-1       | 2026-10-21T02:24:17.610941209Z 2026/10/21 02:24:17 [cons-auditoria] recibido usuario.registrado | id=ac52a39c-4ca9-4c64-a469-4a22dfff18bd | datos=map[email:usuario7@ejemplo.com usuario_id:7]
+cons-auditoria-1       | 2026-10-21T02:24:17.874775990Z 2026/10/21 02:24:17 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-6-1792549457873829595 | datos=map[producto:SKU-020 stock:87]
+rabbitmq-1             | 2026-10-21T02:23:51.581208512Z 2026-10-21 02:23:51.580823+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@8234b44c2bef/coordination/rabbit@8234b44c2bef[0m
+cons-facturacion-1     | 2026-10-21T02:24:02.876950304Z [cons-facturacion] recibido pago.aprobado | id=949df308-4280-4e15-9ae4-fbc4936159fc | datos={"pago_id":1,"pedido_id":77,"monto":384.94}
+cons-auditoria-1       | 2026-10-21T02:24:17.884532668Z 2026/10/21 02:24:17 [cons-auditoria] recibido pago.aprobado | id=fe252e1a-dad2-4211-9fe4-21b675a40f87 | datos=map[monto:476.37 pago_id:6 pedido_id:14]
+cons-inventario-1      | 2026-10-21T02:23:50.180656070Z                ^^^^^^^^^^
+cons-inventario-1      | 2026-10-21T02:23:50.180659428Z   File "/app/consumidor.py", line 23, in conectar
+prod-usuarios-1        | 2026-10-21T02:23:47.522778690Z [prod-usuarios] broker no disponible (Connection refused), reintentando en 2 s
+prod-usuarios-1        | 2026-10-21T02:23:49.523515946Z [prod-usuarios] broker no disponible (Connection refused), reintentando en 2 s
+cons-facturacion-1     | 2026-10-21T02:24:05.511099475Z [cons-facturacion] recibido pedido.creado | id=bc02f7d2-a93c-4fd7-8ac9-b991e63cd89e | datos={"pedido_id":3,"cliente_id":63,"total":375.73}
+cons-facturacion-1     | 2026-10-21T02:24:05.876339199Z [cons-facturacion] recibido pago.aprobado | id=6a00b02d-0083-4a59-844a-78cf3bb98ce0 | datos={"pago_id":2,"pedido_id":26,"monto":170.46}
+cons-inventario-1      | 2026-10-21T02:23:50.180738408Z     return pika.BlockingConnection(parametros)
+cons-inventario-1      | 2026-10-21T02:23:50.180778149Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cons-inventario-1      | 2026-10-21T02:23:50.180871386Z   File "/usr/local/lib/python3.12/site-packages/pika/adapters/blocking_connection.py", line 381, in __init__
+cons-inventario-1      | 2026-10-21T02:23:50.181151265Z     self._impl = self._create_connection(parameters, _impl_class)
+prod-usuarios-1        | 2026-10-21T02:23:51.524212233Z [prod-usuarios] broker no disponible (Connection refused), reintentando en 2 s
+prod-usuarios-1        | 2026-10-21T02:23:53.525573606Z [prod-usuarios] broker no disponible (Connection refused), reintentando en 2 s
+cons-inventario-1      | 2026-10-21T02:23:50.181167095Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cons-inventario-1      | 2026-10-21T02:23:50.181170159Z   File "/usr/local/lib/python3.12/site-packages/pika/adapters/blocking_connection.py", line 478, in _create_connection
+cons-inventario-1      | 2026-10-21T02:23:50.181361297Z     raise self._reap_last_connection_workflow_error(error)
+cons-inventario-1      | 2026-10-21T02:23:50.181386785Z   File "/usr/local/lib/python3.12/site-packages/pika/adapters/utils/selector_ioloop_adapter.py", line 570, in _resolve
+cons-inventario-1      | 2026-10-21T02:23:50.181552617Z     result: Any = socket.getaddrinfo(host=self._host,
+prod-usuarios-1        | 2026-10-21T02:23:55.526273208Z [prod-usuarios] broker no disponible (Connection refused), reintentando en 2 s
+cons-facturacion-1     | 2026-10-21T02:24:08.511330342Z [cons-facturacion] recibido pedido.creado | id=16282577-b969-43d5-a46b-8a1cba295772 | datos={"pedido_id":4,"cliente_id":99,"total":76.88}
+cons-facturacion-1     | 2026-10-21T02:24:08.876979261Z [cons-facturacion] recibido pago.aprobado | id=69f2d0b1-e1aa-4709-9150-a2d3e5dd7506 | datos={"pago_id":3,"pedido_id":79,"monto":231.19}
+cons-facturacion-1     | 2026-10-21T02:24:11.511949725Z [cons-facturacion] recibido pedido.creado | id=b30043a2-3586-48ba-9d15-92f0511cc15a | datos={"pedido_id":5,"cliente_id":20,"total":294.25}
+cons-auditoria-1       | 2026-10-21T02:24:20.512145423Z 2026/10/21 02:24:20 [cons-auditoria] recibido pedido.creado | id=1e8efa9e-3792-45ea-9c4e-f1723217eda4 | datos=map[cliente_id:28 pedido_id:8 total:165.3]
+cons-auditoria-1       | 2026-10-21T02:24:20.611943214Z 2026/10/21 02:24:20 [cons-auditoria] recibido usuario.registrado | id=4edf8d74-92df-4fe4-877c-714a624b1108 | datos=map[email:usuario8@ejemplo.com usuario_id:8]
+cons-auditoria-1       | 2026-10-21T02:24:20.872989213Z 2026/10/21 02:24:20 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-7-1792549460871873614 | datos=map[producto:SKU-013 stock:76]
+cons-inventario-1      | 2026-10-21T02:23:50.181559534Z                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rabbitmq-1             | 2026-10-21T02:23:51.582856139Z 2026-10-21 02:23:51.582379+00:00 [info] <0.282.0> ra system 'coordination' running pre init for 0 registered servers[0m
+prod-usuarios-1        | 2026-10-21T02:23:57.527004964Z [prod-usuarios] broker no disponible (Connection refused), reintentando en 2 s
+prod-usuarios-1        | 2026-10-21T02:23:59.584582564Z [prod-usuarios] conectado a rabbitmq:5672, publicando 'usuario.registrado' cada 3000 ms
+prod-usuarios-1        | 2026-10-21T02:23:59.604287178Z [prod-usuarios] publicado usuario.registrado #1
+prod-usuarios-1        | 2026-10-21T02:24:02.606704972Z [prod-usuarios] publicado usuario.registrado #2
+prod-usuarios-1        | 2026-10-21T02:24:05.607393886Z [prod-usuarios] publicado usuario.registrado #3
+prod-usuarios-1        | 2026-10-21T02:24:08.608393240Z [prod-usuarios] publicado usuario.registrado #4
+prod-usuarios-1        | 2026-10-21T02:24:11.609610510Z [prod-usuarios] publicado usuario.registrado #5
+prod-usuarios-1        | 2026-10-21T02:24:14.609368399Z [prod-usuarios] publicado usuario.registrado #6
+prod-usuarios-1        | 2026-10-21T02:24:17.610200749Z [prod-usuarios] publicado usuario.registrado #7
+prod-usuarios-1        | 2026-10-21T02:24:20.611185563Z [prod-usuarios] publicado usuario.registrado #8
+prod-usuarios-1        | 2026-10-21T02:24:23.611987895Z [prod-usuarios] publicado usuario.registrado #9
+cons-inventario-1      | 2026-10-21T02:23:50.181591222Z   File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+cons-auditoria-1       | 2026-10-21T02:24:20.888413660Z 2026/10/21 02:24:20 [cons-auditoria] recibido pago.aprobado | id=29989ce4-a65e-408d-a49b-2112bee3326b | datos=map[monto:390.65 pago_id:7 pedido_id:38]
+cons-auditoria-1       | 2026-10-21T02:24:23.512910490Z 2026/10/21 02:24:23 [cons-auditoria] recibido pedido.creado | id=584821e7-7da6-499b-b5ab-f650b7e6c514 | datos=map[cliente_id:77 pedido_id:9 total:347.79]
+cons-facturacion-1     | 2026-10-21T02:24:11.879970634Z [cons-facturacion] recibido pago.aprobado | id=74703da1-ec53-4a60-9d26-8afa2201beb7 | datos={"pago_id":4,"pedido_id":3,"monto":194.25}
+cons-facturacion-1     | 2026-10-21T02:24:14.511250691Z [cons-facturacion] recibido pedido.creado | id=43b4149f-c4cb-4e87-b83a-e4dc476d47e1 | datos={"pedido_id":6,"cliente_id":18,"total":365.04}
+cons-facturacion-1     | 2026-10-21T02:24:14.882061629Z [cons-facturacion] recibido pago.aprobado | id=e612783d-0a9e-4d1a-b3d0-299c6997a709 | datos={"pago_id":5,"pedido_id":94,"monto":27.58}
+cons-facturacion-1     | 2026-10-21T02:24:17.511610384Z [cons-facturacion] recibido pedido.creado | id=253e4c82-13ee-4577-9cae-f4eb50cc66a5 | datos={"pedido_id":7,"cliente_id":83,"total":460.6}
+cons-facturacion-1     | 2026-10-21T02:24:17.884802184Z [cons-facturacion] recibido pago.aprobado | id=fe252e1a-dad2-4211-9fe4-21b675a40f87 | datos={"pago_id":6,"pedido_id":14,"monto":476.37}
+cons-facturacion-1     | 2026-10-21T02:24:20.512923535Z [cons-facturacion] recibido pedido.creado | id=1e8efa9e-3792-45ea-9c4e-f1723217eda4 | datos={"pedido_id":8,"cliente_id":28,"total":165.3}
+cons-inventario-1      | 2026-10-21T02:23:50.181932540Z     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+cons-inventario-1      | 2026-10-21T02:23:50.181968957Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cons-inventario-1      | 2026-10-21T02:23:50.182053786Z socket.gaierror: [Errno -2] Name or service not known
+cons-inventario-1      | 2026-10-21T02:23:51.105270211Z [cons-inventario] broker no disponible, reintentando en 2 s
+cons-auditoria-1       | 2026-10-21T02:24:23.612925235Z 2026/10/21 02:24:23 [cons-auditoria] recibido usuario.registrado | id=85fcedbd-0bcf-4cb6-a8fd-5a06d343e811 | datos=map[email:usuario9@ejemplo.com usuario_id:9]
+cons-auditoria-1       | 2026-10-21T02:24:23.875317078Z 2026/10/21 02:24:23 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-8-1792549463874010435 | datos=map[producto:SKU-012 stock:48]
+cons-auditoria-1       | 2026-10-21T02:24:23.891664171Z 2026/10/21 02:24:23 [cons-auditoria] recibido pago.aprobado | id=923cebcb-14a0-4fe2-85d1-05c73ef2ecd3 | datos=map[monto:232.18 pago_id:8 pedido_id:8]
+rabbitmq-1             | 2026-10-21T02:23:51.583629927Z 2026-10-21 02:23:51.583314+00:00 [info] <0.283.0> ra: meta data store initialised for system coordination. 0 record(s) recovered[0m
+rabbitmq-1             | 2026-10-21T02:23:51.583772984Z [38;5;87m2026-10-21 02:23:51.583516+00:00 [notice] <0.288.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables[0m
+rabbitmq-1             | 2026-10-21T02:23:51.591766087Z 2026-10-21 02:23:51.591319+00:00 [info] <0.254.0> ra: starting system coordination[0m
+rabbitmq-1             | 2026-10-21T02:23:51.591799071Z 2026-10-21 02:23:51.591413+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@8234b44c2bef/coordination/rabbit@8234b44c2bef[0m
+rabbitmq-1             | 2026-10-21T02:23:51.719037151Z 2026-10-21 02:23:51.718274+00:00 [info] <0.254.0> Waiting for Khepri leader for 30000 ms, 9 retries left[0m
+rabbitmq-1             | 2026-10-21T02:23:51.740894589Z [38;5;87m2026-10-21 02:23:51.740240+00:00 [notice] <0.292.0> RabbitMQ metadata store: candidate -> leader in term: 1 machine version: 1[0m
+rabbitmq-1             | 2026-10-21T02:23:51.752306429Z 2026-10-21 02:23:51.751761+00:00 [info] <0.254.0> Khepri leader elected[0m
+rabbitmq-1             | 2026-10-21T02:23:51.752383364Z 2026-10-21 02:23:51.751872+00:00 [info] <0.254.0> Waiting for Khepri projections for 30000 ms, 9 retries left[0m
+rabbitmq-1             | 2026-10-21T02:23:52.238201981Z 2026-10-21 02:23:52.237592+00:00 [info] <0.254.0> [0m
+cons-facturacion-1     | 2026-10-21T02:24:20.888805139Z [cons-facturacion] recibido pago.aprobado | id=29989ce4-a65e-408d-a49b-2112bee3326b | datos={"pago_id":7,"pedido_id":38,"monto":390.65}
+cons-facturacion-1     | 2026-10-21T02:24:23.513014518Z [cons-facturacion] recibido pedido.creado | id=584821e7-7da6-499b-b5ab-f650b7e6c514 | datos={"pedido_id":9,"cliente_id":77,"total":347.79}
+rabbitmq-1             | 2026-10-21T02:23:52.238239304Z 2026-10-21 02:23:52.237592+00:00 [info] <0.254.0>  Starting RabbitMQ 3.13.7 on Erlang 26.2.5.16 [jit][0m
+rabbitmq-1             | 2026-10-21T02:23:52.238243430Z 2026-10-21 02:23:52.237592+00:00 [info] <0.254.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries[0m
+cons-facturacion-1     | 2026-10-21T02:24:23.891883631Z [cons-facturacion] recibido pago.aprobado | id=923cebcb-14a0-4fe2-85d1-05c73ef2ecd3 | datos={"pago_id":8,"pedido_id":8,"monto":232.18}
+rabbitmq-1             | 2026-10-21T02:23:52.238246169Z 2026-10-21 02:23:52.237592+00:00 [info] <0.254.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+rabbitmq-1             | 2026-10-21T02:23:52.239036789Z 
+rabbitmq-1             | 2026-10-21T02:23:52.239064231Z   ##  ##      RabbitMQ 3.13.7
+rabbitmq-1             | 2026-10-21T02:23:52.239067463Z   ##  ##
+cons-inventario-1      | 2026-10-21T02:23:53.108599781Z [cons-inventario] broker no disponible, reintentando en 2 s
+cons-inventario-1      | 2026-10-21T02:23:55.110340908Z [cons-inventario] broker no disponible, reintentando en 2 s
+rabbitmq-1             | 2026-10-21T02:23:52.239070329Z   ##########  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+rabbitmq-1             | 2026-10-21T02:23:52.239073019Z   ######  ##
+rabbitmq-1             | 2026-10-21T02:23:52.239075465Z   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+rabbitmq-1             | 2026-10-21T02:23:52.239078040Z 
+rabbitmq-1             | 2026-10-21T02:23:52.239080347Z   Erlang:      26.2.5.16 [jit]
+rabbitmq-1             | 2026-10-21T02:23:52.239082791Z   TLS Library: OpenSSL - OpenSSL 3.1.8 11 Feb 2025
+rabbitmq-1             | 2026-10-21T02:23:52.239085327Z   Release series support status: see https://www.rabbitmq.com/release-information
+rabbitmq-1             | 2026-10-21T02:23:52.239087813Z 
+rabbitmq-1             | 2026-10-21T02:23:52.239090124Z   Doc guides:  https://www.rabbitmq.com/docs
+rabbitmq-1             | 2026-10-21T02:23:52.239092570Z   Support:     https://www.rabbitmq.com/docs/contact
+rabbitmq-1             | 2026-10-21T02:23:52.239094974Z   Tutorials:   https://www.rabbitmq.com/tutorials
+cons-inventario-1      | 2026-10-21T02:23:57.112682483Z [cons-inventario] broker no disponible, reintentando en 2 s
+cons-inventario-1      | 2026-10-21T02:23:59.140449877Z [cons-inventario] esperando eventos en cola.inventario con pedido.creado
+rabbitmq-1             | 2026-10-21T02:23:52.239097331Z   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+rabbitmq-1             | 2026-10-21T02:23:52.239099738Z   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+cons-inventario-1      | 2026-10-21T02:23:59.510085772Z [cons-inventario] recibido pedido.creado | id=d328b2d3-df9f-4d41-84b3-efe2c15014b0 | datos={'pedido_id': 1, 'cliente_id': 43, 'total': 296.91}
+cons-inventario-1      | 2026-10-21T02:24:02.511997952Z [cons-inventario] recibido pedido.creado | id=1ceb0876-01ac-4107-b8f4-efd7164858d6 | datos={'pedido_id': 2, 'cliente_id': 44, 'total': 145.91}
+cons-inventario-1      | 2026-10-21T02:24:05.510727508Z [cons-inventario] recibido pedido.creado | id=bc02f7d2-a93c-4fd7-8ac9-b991e63cd89e | datos={'pedido_id': 3, 'cliente_id': 63, 'total': 375.73}
+rabbitmq-1             | 2026-10-21T02:23:52.239102192Z 
+rabbitmq-1             | 2026-10-21T02:23:52.239104620Z   Logs: <stdout>
+rabbitmq-1             | 2026-10-21T02:23:52.239107831Z 
+cons-inventario-1      | 2026-10-21T02:24:08.511264464Z [cons-inventario] recibido pedido.creado | id=16282577-b969-43d5-a46b-8a1cba295772 | datos={'pedido_id': 4, 'cliente_id': 99, 'total': 76.88}
+cons-inventario-1      | 2026-10-21T02:24:11.511846937Z [cons-inventario] recibido pedido.creado | id=b30043a2-3586-48ba-9d15-92f0511cc15a | datos={'pedido_id': 5, 'cliente_id': 20, 'total': 294.25}
+cons-inventario-1      | 2026-10-21T02:24:14.511061719Z [cons-inventario] recibido pedido.creado | id=43b4149f-c4cb-4e87-b83a-e4dc476d47e1 | datos={'pedido_id': 6, 'cliente_id': 18, 'total': 365.04}
+rabbitmq-1             | 2026-10-21T02:23:52.239110165Z   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+rabbitmq-1             | 2026-10-21T02:23:52.239112816Z 
+rabbitmq-1             | 2026-10-21T02:23:52.239794022Z   Starting broker...2026-10-21 02:23:52.239414+00:00 [info] <0.254.0> [0m
+rabbitmq-1             | 2026-10-21T02:23:52.239817539Z 2026-10-21 02:23:52.239414+00:00 [info] <0.254.0>  node           : rabbit@8234b44c2bef[0m
+rabbitmq-1             | 2026-10-21T02:23:52.239821073Z 2026-10-21 02:23:52.239414+00:00 [info] <0.254.0>  home dir       : /var/lib/rabbitmq[0m
+rabbitmq-1             | 2026-10-21T02:23:52.239823916Z 2026-10-21 02:23:52.239414+00:00 [info] <0.254.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+cons-inventario-1      | 2026-10-21T02:24:17.511493792Z [cons-inventario] recibido pedido.creado | id=253e4c82-13ee-4577-9cae-f4eb50cc66a5 | datos={'pedido_id': 7, 'cliente_id': 83, 'total': 460.6}
+cons-inventario-1      | 2026-10-21T02:24:20.512453425Z [cons-inventario] recibido pedido.creado | id=1e8efa9e-3792-45ea-9c4e-f1723217eda4 | datos={'pedido_id': 8, 'cliente_id': 28, 'total': 165.3}
+cons-inventario-1      | 2026-10-21T02:24:23.512952644Z [cons-inventario] recibido pedido.creado | id=584821e7-7da6-499b-b5ab-f650b7e6c514 | datos={'pedido_id': 9, 'cliente_id': 77, 'total': 347.79}
+rabbitmq-1             | 2026-10-21T02:23:52.239841515Z 2026-10-21 02:23:52.239414+00:00 [info] <0.254.0>  cookie hash    : HfQlF448V3PwutQG5ukR0w==[0m
+rabbitmq-1             | 2026-10-21T02:23:52.239845698Z 2026-10-21 02:23:52.239414+00:00 [info] <0.254.0>  log(s)         : <stdout>[0m
+rabbitmq-1             | 2026-10-21T02:23:52.239848588Z 2026-10-21 02:23:52.239414+00:00 [info] <0.254.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@8234b44c2bef[0m
+rabbitmq-1             | 2026-10-21T02:23:53.008280066Z 2026-10-21 02:23:53.007817+00:00 [info] <0.254.0> Running boot step pre_boot defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.008357376Z 2026-10-21 02:23:53.007941+00:00 [info] <0.254.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.008563594Z 2026-10-21 02:23:53.008316+00:00 [info] <0.254.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.008573803Z 2026-10-21 02:23:53.008414+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.009364278Z 2026-10-21 02:23:53.009111+00:00 [info] <0.254.0> Running boot step rabbit_alarm defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.022617193Z 2026-10-21 02:23:53.021962+00:00 [info] <0.329.0> Memory high watermark set to 4724 MiB (4954324992 bytes) of 11812 MiB (12385812480 bytes) total[0m
+rabbitmq-1             | 2026-10-21T02:23:53.026044817Z 2026-10-21 02:23:53.025404+00:00 [info] <0.331.0> Enabling free disk space monitoring (disk free space: 1003764117504, total memory: 12385812480)[0m
+rabbitmq-1             | 2026-10-21T02:23:53.026076290Z 2026-10-21 02:23:53.025530+00:00 [info] <0.331.0> Disk free limit set to 50MB[0m
+rabbitmq-1             | 2026-10-21T02:23:53.028141474Z 2026-10-21 02:23:53.027719+00:00 [info] <0.254.0> Running boot step code_server_cache defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.028174056Z 2026-10-21 02:23:53.027913+00:00 [info] <0.254.0> Running boot step file_handle_cache defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.035603662Z 2026-10-21 02:23:53.035178+00:00 [info] <0.334.0> Limiting to approx 1048479 file handles (943629 sockets)[0m
+rabbitmq-1             | 2026-10-21T02:23:53.035635319Z 2026-10-21 02:23:53.035390+00:00 [info] <0.335.0> FHC read buffering: OFF[0m
+rabbitmq-1             | 2026-10-21T02:23:53.035637715Z 2026-10-21 02:23:53.035451+00:00 [info] <0.335.0> FHC write buffering: ON[0m
+rabbitmq-1             | 2026-10-21T02:23:53.036123168Z 2026-10-21 02:23:53.035877+00:00 [info] <0.254.0> Running boot step worker_pool defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.036142445Z 2026-10-21 02:23:53.035959+00:00 [info] <0.315.0> Will use 8 processes for default worker pool[0m
+rabbitmq-1             | 2026-10-21T02:23:53.036152329Z 2026-10-21 02:23:53.036008+00:00 [info] <0.315.0> Starting worker pool 'worker_pool' with 8 processes in it[0m
+rabbitmq-1             | 2026-10-21T02:23:53.036816836Z 2026-10-21 02:23:53.036554+00:00 [info] <0.254.0> Running boot step database defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.037275488Z 2026-10-21 02:23:53.036999+00:00 [info] <0.254.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+rabbitmq-1             | 2026-10-21T02:23:53.038181296Z [38;5;87m2026-10-21 02:23:53.037946+00:00 [notice] <0.316.0> Feature flags: attempt to enable `detailed_queues_endpoint`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.112198560Z [38;5;87m2026-10-21 02:23:53.111833+00:00 [notice] <0.316.0> Feature flags: `detailed_queues_endpoint` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.112228155Z [38;5;87m2026-10-21 02:23:53.112004+00:00 [notice] <0.316.0> Feature flags: attempt to enable `quorum_queue_non_voters`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.185755512Z [38;5;87m2026-10-21 02:23:53.185314+00:00 [notice] <0.316.0> Feature flags: `quorum_queue_non_voters` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.185847593Z [38;5;87m2026-10-21 02:23:53.185607+00:00 [notice] <0.316.0> Feature flags: attempt to enable `stream_update_config_command`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.253378912Z [38;5;87m2026-10-21 02:23:53.252963+00:00 [notice] <0.316.0> Feature flags: `stream_update_config_command` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.253415322Z [38;5;87m2026-10-21 02:23:53.253150+00:00 [notice] <0.316.0> Feature flags: attempt to enable `stream_filtering`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.335962351Z [38;5;87m2026-10-21 02:23:53.335512+00:00 [notice] <0.316.0> Feature flags: `stream_filtering` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.335996657Z [38;5;87m2026-10-21 02:23:53.335729+00:00 [notice] <0.316.0> Feature flags: attempt to enable `stream_sac_coordinator_unblock_group`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.408380541Z [38;5;87m2026-10-21 02:23:53.408051+00:00 [notice] <0.316.0> Feature flags: `stream_sac_coordinator_unblock_group` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.408417190Z [38;5;87m2026-10-21 02:23:53.408198+00:00 [notice] <0.316.0> Feature flags: attempt to enable `restart_streams`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.468226453Z [38;5;87m2026-10-21 02:23:53.467831+00:00 [notice] <0.316.0> Feature flags: `restart_streams` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.468253659Z [38;5;87m2026-10-21 02:23:53.468005+00:00 [notice] <0.316.0> Feature flags: attempt to enable `message_containers`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.529188984Z [38;5;87m2026-10-21 02:23:53.528802+00:00 [notice] <0.316.0> Feature flags: `message_containers` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.529215858Z [38;5;87m2026-10-21 02:23:53.528930+00:00 [notice] <0.316.0> Feature flags: attempt to enable `message_containers_deaths_v2`...[0m
+rabbitmq-1             | 2026-10-21T02:23:53.598086248Z [38;5;87m2026-10-21 02:23:53.597604+00:00 [notice] <0.316.0> Feature flags: `message_containers_deaths_v2` enabled[0m
+rabbitmq-1             | 2026-10-21T02:23:53.598514654Z 2026-10-21 02:23:53.598144+00:00 [info] <0.254.0> DB: virgin node -> run peer discovery[0m
+rabbitmq-1             | 2026-10-21T02:23:53.598529643Z [38;5;214m2026-10-21 02:23:53.598229+00:00 [warning] <0.254.0> Classic peer discovery backend: list of nodes does not contain the local node [][0m
+rabbitmq-1             | 2026-10-21T02:23:53.609001353Z [38;5;87m2026-10-21 02:23:53.608600+00:00 [notice] <0.44.0> Application mnesia exited with reason: stopped[0m
+rabbitmq-1             | 2026-10-21T02:23:53.921921974Z 2026-10-21 02:23:53.921551+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq-1             | 2026-10-21T02:23:53.921948834Z 2026-10-21 02:23:53.921685+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+rabbitmq-1             | 2026-10-21T02:23:53.922049597Z 2026-10-21 02:23:53.921777+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq-1             | 2026-10-21T02:23:53.922121172Z 2026-10-21 02:23:53.921859+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+rabbitmq-1             | 2026-10-21T02:23:53.942626129Z 2026-10-21 02:23:53.942144+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq-1             | 2026-10-21T02:23:53.942659254Z 2026-10-21 02:23:53.942407+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+rabbitmq-1             | 2026-10-21T02:23:53.942938796Z 2026-10-21 02:23:53.942640+00:00 [info] <0.254.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.942996800Z 2026-10-21 02:23:53.942773+00:00 [info] <0.562.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943136112Z 2026-10-21 02:23:53.942836+00:00 [info] <0.562.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943239420Z 2026-10-21 02:23:53.942959+00:00 [info] <0.562.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943320985Z 2026-10-21 02:23:53.943036+00:00 [info] <0.562.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943442464Z 2026-10-21 02:23:53.943115+00:00 [info] <0.562.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943570345Z 2026-10-21 02:23:53.943190+00:00 [info] <0.254.0> Running boot step networking_metadata_store defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943627897Z 2026-10-21 02:23:53.943341+00:00 [info] <0.254.0> Running boot step feature_flags defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943780552Z 2026-10-21 02:23:53.943453+00:00 [info] <0.254.0> Running boot step codec_correctness_check defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.943853783Z 2026-10-21 02:23:53.943491+00:00 [info] <0.254.0> Running boot step external_infrastructure defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944020721Z 2026-10-21 02:23:53.943611+00:00 [info] <0.254.0> Running boot step rabbit_event defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944032259Z 2026-10-21 02:23:53.943767+00:00 [info] <0.254.0> Running boot step rabbit_registry defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944127286Z 2026-10-21 02:23:53.943917+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944197120Z 2026-10-21 02:23:53.944030+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944329449Z 2026-10-21 02:23:53.944087+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944399478Z 2026-10-21 02:23:53.944127+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944505089Z 2026-10-21 02:23:53.944171+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944589833Z 2026-10-21 02:23:53.944210+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944706340Z 2026-10-21 02:23:53.944245+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944805677Z 2026-10-21 02:23:53.944283+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944906280Z 2026-10-21 02:23:53.944333+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.944995857Z 2026-10-21 02:23:53.944378+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945149526Z 2026-10-21 02:23:53.944413+00:00 [info] <0.254.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945215463Z 2026-10-21 02:23:53.944441+00:00 [info] <0.254.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945363586Z 2026-10-21 02:23:53.944496+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_client_local defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945395298Z 2026-10-21 02:23:53.944572+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945544085Z 2026-10-21 02:23:53.944625+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_random defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945573151Z 2026-10-21 02:23:53.944672+00:00 [info] <0.254.0> Running boot step kernel_ready defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945694976Z 2026-10-21 02:23:53.944717+00:00 [info] <0.254.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.945783957Z 2026-10-21 02:23:53.944976+00:00 [info] <0.254.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.947209385Z 2026-10-21 02:23:53.946770+00:00 [info] <0.570.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+rabbitmq-1             | 2026-10-21T02:23:53.947239858Z 2026-10-21 02:23:53.946987+00:00 [info] <0.254.0> Running boot step guid_generator defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.957083501Z 2026-10-21 02:23:53.956501+00:00 [info] <0.254.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.957134951Z 2026-10-21 02:23:53.956893+00:00 [info] <0.574.0> Starting rabbit_node_monitor (in ignore mode)[0m
+rabbitmq-1             | 2026-10-21T02:23:53.957350479Z 2026-10-21 02:23:53.956989+00:00 [info] <0.254.0> Running boot step delegate_sup defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.957883928Z 2026-10-21 02:23:53.957483+00:00 [info] <0.254.0> Running boot step rabbit_memory_monitor defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.958141617Z 2026-10-21 02:23:53.957868+00:00 [info] <0.254.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.958153099Z 2026-10-21 02:23:53.957978+00:00 [info] <0.254.0> Running boot step core_initialized defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.958332242Z 2026-10-21 02:23:53.958008+00:00 [info] <0.254.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.958397765Z 2026-10-21 02:23:53.958081+00:00 [info] <0.254.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.958516399Z 2026-10-21 02:23:53.958176+00:00 [info] <0.254.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.958612931Z 2026-10-21 02:23:53.958236+00:00 [info] <0.254.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.993723700Z 2026-10-21 02:23:53.993369+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.993998280Z 2026-10-21 02:23:53.993776+00:00 [info] <0.254.0> Running boot step rabbit_policies defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994498554Z 2026-10-21 02:23:53.994127+00:00 [info] <0.254.0> Running boot step rabbit_policy defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994508764Z 2026-10-21 02:23:53.994275+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_validator defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994552102Z 2026-10-21 02:23:53.994358+00:00 [info] <0.254.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994687437Z 2026-10-21 02:23:53.994409+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994693991Z 2026-10-21 02:23:53.994491+00:00 [info] <0.254.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994847360Z 2026-10-21 02:23:53.994625+00:00 [info] <0.254.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994908949Z 2026-10-21 02:23:53.994667+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+rabbitmq-1             | 2026-10-21T02:23:53.994996282Z 2026-10-21 02:23:53.994748+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+rabbitmq-1             | 2026-10-21T02:23:54.002702863Z 2026-10-21 02:23:54.002336+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+rabbitmq-1             | 2026-10-21T02:23:54.002733245Z 2026-10-21 02:23:54.002532+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+rabbitmq-1             | 2026-10-21T02:23:54.002891879Z 2026-10-21 02:23:54.002614+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+rabbitmq-1             | 2026-10-21T02:23:54.002929988Z 2026-10-21 02:23:54.002667+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+rabbitmq-1             | 2026-10-21T02:23:54.003032624Z 2026-10-21 02:23:54.002701+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.003101035Z 2026-10-21 02:23:54.002923+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.016664898Z 2026-10-21 02:23:54.016300+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.016697237Z 2026-10-21 02:23:54.016411+00:00 [info] <0.254.0> Will seed default virtual host and user...[0m
+rabbitmq-1             | 2026-10-21T02:23:54.016704341Z 2026-10-21 02:23:54.016482+00:00 [info] <0.254.0> Adding vhost '/' (description: 'Default virtual host', tags: [])[0m
+rabbitmq-1             | 2026-10-21T02:23:54.066582563Z 2026-10-21 02:23:54.066142+00:00 [info] <0.634.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@8234b44c2bef/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+rabbitmq-1             | 2026-10-21T02:23:54.067935247Z 2026-10-21 02:23:54.067639+00:00 [info] <0.634.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.083718434Z 2026-10-21 02:23:54.083372+00:00 [info] <0.634.0> Starting message stores for vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.083981533Z 2026-10-21 02:23:54.083665+00:00 [info] <0.643.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+rabbitmq-1             | 2026-10-21T02:23:54.085063471Z 2026-10-21 02:23:54.084797+00:00 [info] <0.634.0> Started message store of type transient for vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.085246532Z 2026-10-21 02:23:54.084983+00:00 [info] <0.647.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+rabbitmq-1             | 2026-10-21T02:23:54.085731797Z [38;5;214m2026-10-21 02:23:54.085485+00:00 [warning] <0.647.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch[0m
+rabbitmq-1             | 2026-10-21T02:23:54.086406355Z 2026-10-21 02:23:54.086171+00:00 [info] <0.634.0> Started message store of type persistent for vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.086560609Z 2026-10-21 02:23:54.086287+00:00 [info] <0.634.0> Recovering 0 queues of type rabbit_classic_queue took 17ms[0m
+rabbitmq-1             | 2026-10-21T02:23:54.086729768Z 2026-10-21 02:23:54.086323+00:00 [info] <0.634.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+rabbitmq-1             | 2026-10-21T02:23:54.086890784Z 2026-10-21 02:23:54.086354+00:00 [info] <0.634.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+rabbitmq-1             | 2026-10-21T02:23:54.094219009Z 2026-10-21 02:23:54.093808+00:00 [info] <0.254.0> Created user 'taller'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.100283499Z 2026-10-21 02:23:54.099847+00:00 [info] <0.254.0> Successfully set user tags for user 'taller' to [administrator][0m
+rabbitmq-1             | 2026-10-21T02:23:54.107545961Z 2026-10-21 02:23:54.107115+00:00 [info] <0.254.0> Successfully set permissions for user 'taller' in virtual host '/' to '.*', '.*', '.*'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.107581692Z 2026-10-21 02:23:54.107240+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.107585475Z 2026-10-21 02:23:54.107285+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.107727910Z 2026-10-21 02:23:54.107335+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.107744397Z 2026-10-21 02:23:54.107471+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.107843947Z 2026-10-21 02:23:54.107642+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.107898463Z 2026-10-21 02:23:54.107685+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.108071338Z 2026-10-21 02:23:54.107732+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.108083084Z 2026-10-21 02:23:54.107852+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.108191789Z 2026-10-21 02:23:54.107927+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.108336050Z 2026-10-21 02:23:54.108066+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.108429713Z 2026-10-21 02:23:54.108124+00:00 [info] <0.315.0> Starting worker pool 'definition_import_pool' with 8 processes in it[0m
+rabbitmq-1             | 2026-10-21T02:23:54.108784747Z 2026-10-21 02:23:54.108551+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.108900759Z 2026-10-21 02:23:54.108672+00:00 [info] <0.254.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-tPWCbzKoDzKrZVeSlpvg-w'[0m
+rabbitmq-1             | 2026-10-21T02:23:54.114446954Z 2026-10-21 02:23:54.114088+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.114490160Z 2026-10-21 02:23:54.114316+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+rabbitmq-1             | 2026-10-21T02:23:54.114650744Z 2026-10-21 02:23:54.114448+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+rabbitmq-1             | 2026-10-21T02:23:54.114814913Z 2026-10-21 02:23:54.114605+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+rabbitmq-1             | 2026-10-21T02:23:54.114966086Z 2026-10-21 02:23:54.114706+00:00 [info] <0.688.0> Resetting node maintenance status[0m
+rabbitmq-1             | 2026-10-21T02:23:54.322115363Z [38;5;214m2026-10-21 02:23:54.321277+00:00 [warning] <0.717.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+rabbitmq-1             | 2026-10-21T02:23:54.322149458Z [38;5;214m2026-10-21 02:23:54.321277+00:00 [warning] <0.717.0> By default, this feature can still be used for now.[0m
+rabbitmq-1             | 2026-10-21T02:23:54.322153227Z [38;5;214m2026-10-21 02:23:54.321277+00:00 [warning] <0.717.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+rabbitmq-1             | 2026-10-21T02:23:54.322156028Z [38;5;214m2026-10-21 02:23:54.321277+00:00 [warning] <0.717.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+rabbitmq-1             | 2026-10-21T02:23:54.322171456Z [38;5;214m2026-10-21 02:23:54.321277+00:00 [warning] <0.717.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+rabbitmq-1             | 2026-10-21T02:23:54.322174758Z [38;5;214m2026-10-21 02:23:54.321277+00:00 [warning] <0.717.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+rabbitmq-1             | 2026-10-21T02:23:54.322177641Z [38;5;214m2026-10-21 02:23:54.321277+00:00 [warning] <0.717.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+rabbitmq-1             | 2026-10-21T02:23:57.907303452Z 2026-10-21 02:23:57.906987+00:00 [info] <0.754.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+rabbitmq-1             | 2026-10-21T02:23:57.907479530Z 2026-10-21 02:23:57.907149+00:00 [info] <0.784.0> Statistics database started.[0m
+rabbitmq-1             | 2026-10-21T02:23:57.907615460Z 2026-10-21 02:23:57.907225+00:00 [info] <0.783.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+rabbitmq-1             | 2026-10-21T02:23:57.916498591Z 2026-10-21 02:23:57.916071+00:00 [info] <0.802.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+rabbitmq-1             | 2026-10-21T02:23:57.916662689Z 2026-10-21 02:23:57.916327+00:00 [info] <0.688.0> Ready to start client connection listeners[0m
+rabbitmq-1             | 2026-10-21T02:23:57.919075831Z 2026-10-21 02:23:57.918620+00:00 [info] <0.846.0> started TCP listener on [::]:5672[0m
+rabbitmq-1             | 2026-10-21T02:23:58.002984284Z 2026-10-21 02:23:58.002645+00:00 [info] <0.688.0> Server startup complete; 5 plugins started.[0m
+rabbitmq-1             | 2026-10-21T02:23:58.003017655Z 2026-10-21 02:23:58.002645+00:00 [info] <0.688.0>  * rabbitmq_prometheus[0m
+rabbitmq-1             | 2026-10-21T02:23:58.003021096Z 2026-10-21 02:23:58.002645+00:00 [info] <0.688.0>  * rabbitmq_federation[0m
+rabbitmq-1             | 2026-10-21T02:23:58.003023674Z 2026-10-21 02:23:58.002645+00:00 [info] <0.688.0>  * rabbitmq_management[0m
+rabbitmq-1             | 2026-10-21T02:23:58.003026447Z 2026-10-21 02:23:58.002645+00:00 [info] <0.688.0>  * rabbitmq_management_agent[0m
+rabbitmq-1             | 2026-10-21T02:23:58.003029486Z 2026-10-21 02:23:58.002645+00:00 [info] <0.688.0>  * rabbitmq_web_dispatch[0m
+rabbitmq-1             | 2026-10-21T02:23:58.003031927Z  completed with 5 plugins.
+rabbitmq-1             | 2026-10-21T02:23:58.152465876Z 2026-10-21 02:23:58.151902+00:00 [info] <0.9.0> Time to start RabbitMQ: 10390 ms[0m
+rabbitmq-1             | 2026-10-21T02:23:58.186526054Z 2026-10-21 02:23:58.186105+00:00 [info] <0.850.0> accepting AMQP connection <0.850.0> (172.21.0.3:57062 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:58.189368207Z 2026-10-21 02:23:58.188864+00:00 [info] <0.850.0> connection <0.850.0> (172.21.0.3:57062 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:58.352855379Z 2026-10-21 02:23:58.352249+00:00 [info] <0.872.0> accepting AMQP connection <0.872.0> (172.21.0.6:41740 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:58.368182527Z 2026-10-21 02:23:58.367463+00:00 [info] <0.875.0> accepting AMQP connection <0.875.0> (172.21.0.7:48536 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:58.384552749Z 2026-10-21 02:23:58.384024+00:00 [info] <0.872.0> connection <0.872.0> (172.21.0.6:41740 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:58.421842416Z 2026-10-21 02:23:58.421394+00:00 [info] <0.875.0> connection <0.875.0> (172.21.0.7:48536 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:59.115040703Z 2026-10-21 02:23:59.114475+00:00 [info] <0.917.0> accepting AMQP connection <0.917.0> (172.21.0.2:34444 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:59.117791082Z 2026-10-21 02:23:59.117301+00:00 [info] <0.917.0> connection <0.917.0> (172.21.0.2:34444 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:59.503430094Z 2026-10-21 02:23:59.502963+00:00 [info] <0.937.0> accepting AMQP connection <0.937.0> (172.21.0.8:59024 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:59.505502459Z 2026-10-21 02:23:59.505240+00:00 [info] <0.937.0> connection <0.937.0> (172.21.0.8:59024 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:59.546329938Z 2026-10-21 02:23:59.545609+00:00 [info] <0.950.0> accepting AMQP connection <0.950.0> (172.21.0.9:51558 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:59.576209668Z 2026-10-21 02:23:59.575690+00:00 [info] <0.950.0> connection <0.950.0> (172.21.0.9:51558 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:59.807360335Z 2026-10-21 02:23:59.806487+00:00 [info] <0.963.0> accepting AMQP connection <0.963.0> (172.21.0.4:35710 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:59.862448824Z 2026-10-21 02:23:59.861807+00:00 [info] <0.963.0> connection <0.963.0> (172.21.0.4:35710 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-21T02:23:59.869943953Z 2026-10-21 02:23:59.869312+00:00 [info] <0.976.0> accepting AMQP connection <0.976.0> (172.21.0.5:47772 -> 172.21.0.10:5672)[0m
+rabbitmq-1             | 2026-10-21T02:23:59.872227629Z 2026-10-21 02:23:59.871744+00:00 [info] <0.976.0> connection <0.976.0> (172.21.0.5:47772 -> 172.21.0.10:5672): user 'taller' authenticated and granted access to vhost '/'[0m

@@ -1,0 +1,46 @@
+# Escenario 3 - Nodo 2 (grupo B): productores inventario/usuarios y consumidores notificaciones/auditoria.
+# El broker corre en el nodo 3.
+# Uso: RABBITMQ_HOST=<IP del nodo 3> docker compose up -d --build
+
+name: taller-escenario-3-nodo-2
+
+x-rabbitmq-env: &rabbitmq-env
+  RABBITMQ_HOST: ${RABBITMQ_HOST:?definir la IP del nodo con el broker}
+  RABBITMQ_PORT: "5672"
+  RABBITMQ_USER: ${RABBITMQ_USER:-taller}
+  RABBITMQ_PASS: ${RABBITMQ_PASS:-taller}
+
+services:
+  # Productores
+
+  prod-inventario:
+    build: ../../../productores/go
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: prod-inventario
+      INTERVALO_SEGUNDOS: "3"
+    restart: unless-stopped
+
+  prod-usuarios:
+    build: ../../../productores/java
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: prod-usuarios
+      INTERVALO_SEGUNDOS: "3"
+    restart: unless-stopped
+
+  # Consumidores
+
+  cons-notificaciones:
+    build: ../../../consumidores/java
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: cons-notificaciones
+    restart: unless-stopped
+
+  cons-auditoria:
+    build: ../../../consumidores/go
+    environment:
+      <<: *rabbitmq-env
+      NOMBRE_SERVICIO: cons-auditoria
+    restart: unless-stopped

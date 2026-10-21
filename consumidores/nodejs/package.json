@@ -1,0 +1,9 @@
+{
+  "name": "consumidor-facturacion",
+  "version": "1.0.0",
+  "private": true,
+  "main": "consumidor.js",
+  "dependencies": {
+    "amqplib": "0.10.9"
+  }
+}
