@@ -1,0 +1,171 @@
+﻿NAME                                           IMAGE                                        COMMAND                  SERVICE            CREATED              STATUS              PORTS
+taller-escenario-3-nodo-1-cons-facturacion-1   taller-escenario-3-nodo-1-cons-facturacion   "docker-entrypoint.s…"   cons-facturacion   About a minute ago   Up About a minute   
+taller-escenario-3-nodo-1-cons-inventario-1    taller-escenario-3-nodo-1-cons-inventario    "python -u consumido…"   cons-inventario    About a minute ago   Up About a minute   
+taller-escenario-3-nodo-1-prod-pagos-1         taller-escenario-3-nodo-1-prod-pagos         "docker-entrypoint.s…"   prod-pagos         About a minute ago   Up About a minute   
+taller-escenario-3-nodo-1-prod-pedidos-1       taller-escenario-3-nodo-1-prod-pedidos       "python -u productor…"   prod-pedidos       About a minute ago   Up About a minute   
+cons-inventario-1   | [cons-inventario] esperando eventos en cola.inventario con pedido.creado
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=e03c94e1-1ded-4ef9-8ecb-da38005d0366 | datos={'pedido_id': 2, 'cliente_id': 36, 'total': 169.44}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=ece47850-859f-4a9f-a5e8-d934c95fa0c8 | datos={'pedido_id': 3, 'cliente_id': 27, 'total': 176.75}
+cons-facturacion-1  | [cons-facturacion] esperando eventos en cola.facturacion con pedido.creado, pago.aprobado
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=618f290c-3acc-4f5b-b650-7b4d22c91704 | datos={'pedido_id': 4, 'cliente_id': 81, 'total': 258.93}
+prod-pagos-1        | [prod-pagos] conectado a 10.212.159.66:5672, publicando 'pago.aprobado' cada 3 s
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=81ff1f59-7ab6-41a1-aa7b-29ca8cf1509e | datos={'pedido_id': 5, 'cliente_id': 5, 'total': 455.42}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=c837c81d-c91d-4aaa-9bda-bd3100382a41 | datos={"pedido_id":1,"cliente_id":16,"total":67.33}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=616d127d-4720-4d9f-b18b-ed2645e9adff | datos={'pedido_id': 6, 'cliente_id': 4, 'total': 489.95}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=8f6fd1b0-343f-4dbd-a7c6-7a7b3b829407 | datos={"pago_id":1,"pedido_id":97,"monto":455.68}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=e03c94e1-1ded-4ef9-8ecb-da38005d0366 | datos={"pedido_id":2,"cliente_id":36,"total":169.44}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=ef86e338-dedb-4332-8f3e-fb72746e233c | datos={"pago_id":2,"pedido_id":39,"monto":384.08}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=e07f4129-3fbe-4e96-a5c5-8b7a7bfc81bb | datos={'pedido_id': 7, 'cliente_id': 37, 'total': 386.85}
+prod-pedidos-1      | [prod-pedidos] conectado a 10.212.159.66:5672, publicando 'pedido.creado' cada 3.0 s
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=8e44afb8-9ee9-493f-8ace-21355fbf6d54 | datos={'pedido_id': 8, 'cliente_id': 49, 'total': 426.46}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #1
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=ece47850-859f-4a9f-a5e8-d934c95fa0c8 | datos={"pedido_id":3,"cliente_id":27,"total":176.75}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=4365986d-0e30-42e9-aac9-7513ca6e6564 | datos={'pedido_id': 9, 'cliente_id': 8, 'total': 82.15}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=7ee64a65-e1eb-4d6c-9fa5-fb6eb2c2fb2b | datos={"pago_id":3,"pedido_id":28,"monto":437.75}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=618f290c-3acc-4f5b-b650-7b4d22c91704 | datos={"pedido_id":4,"cliente_id":81,"total":258.93}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=23c0013c-102f-4d74-8e7f-f0a6d1c0bed0 | datos={'pedido_id': 10, 'cliente_id': 1, 'total': 406.27}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #1
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=b6d5492f-091f-47c2-833e-8fcc5d082b7f | datos={'pedido_id': 11, 'cliente_id': 15, 'total': 164.29}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #2
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=831c2ef4-9aab-4836-bc14-f15b0386d300 | datos={"pago_id":4,"pedido_id":91,"monto":323.74}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=81ff1f59-7ab6-41a1-aa7b-29ca8cf1509e | datos={"pedido_id":5,"cliente_id":5,"total":455.42}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=32d632e9-3a61-43a9-9ebf-8d8857148e12 | datos={"pago_id":5,"pedido_id":14,"monto":497.04}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=616d127d-4720-4d9f-b18b-ed2645e9adff | datos={"pedido_id":6,"cliente_id":4,"total":489.95}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #3
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=31f48172-d31b-47c5-a9a5-245d8d8c6c42 | datos={"pago_id":6,"pedido_id":17,"monto":236.4}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #2
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #3
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #4
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #5
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #6
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=e07f4129-3fbe-4e96-a5c5-8b7a7bfc81bb | datos={"pedido_id":7,"cliente_id":37,"total":386.85}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=eac43ef1-ae2f-4db8-ae43-17f068856687 | datos={'pedido_id': 12, 'cliente_id': 32, 'total': 183.53}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=6cb7b1e2-f0b9-43e7-a94b-c44f4f4ce50d | datos={'pedido_id': 13, 'cliente_id': 46, 'total': 86.63}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #4
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #5
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #6
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #7
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=014fe6d2-c658-4b59-9654-b4fdae7d6a05 | datos={'pedido_id': 14, 'cliente_id': 94, 'total': 171.82}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #7
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=4e2a840c-ef05-4294-90d1-cec73f84be1e | datos={'pedido_id': 15, 'cliente_id': 6, 'total': 419.1}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #8
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #8
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=86b57923-136a-4283-a676-cf260925c06c | datos={"pago_id":7,"pedido_id":37,"monto":437.12}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #9
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #10
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #9
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=8e44afb8-9ee9-493f-8ace-21355fbf6d54 | datos={"pedido_id":8,"cliente_id":49,"total":426.46}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=de3e79b2-9f60-481a-abc4-6d8de9b85390 | datos={"pago_id":8,"pedido_id":96,"monto":371.36}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=521e9073-2dab-4ca9-90ef-f146c49afd1c | datos={'pedido_id': 16, 'cliente_id': 25, 'total': 342.26}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #10
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #11
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #12
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #13
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=4365986d-0e30-42e9-aac9-7513ca6e6564 | datos={"pedido_id":9,"cliente_id":8,"total":82.15}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #14
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=253bf251-1152-4f1e-9c71-65425f6a9393 | datos={"pago_id":9,"pedido_id":65,"monto":290.05}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=23c0013c-102f-4d74-8e7f-f0a6d1c0bed0 | datos={"pedido_id":10,"cliente_id":1,"total":406.27}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #15
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=45c7cd94-d507-4c3b-8a7c-18fd862f2285 | datos={"pago_id":10,"pedido_id":19,"monto":17.05}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=b6d5492f-091f-47c2-833e-8fcc5d082b7f | datos={"pedido_id":11,"cliente_id":15,"total":164.29}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=67ea8029-bdef-4c97-8c55-b159163bbc29 | datos={"pago_id":11,"pedido_id":19,"monto":137.03}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=eac43ef1-ae2f-4db8-ae43-17f068856687 | datos={"pedido_id":12,"cliente_id":32,"total":183.53}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #16
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=2fb73ecc-54d7-4120-a8d6-5b855cad6d6d | datos={"pago_id":12,"pedido_id":37,"monto":349.31}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=6cb7b1e2-f0b9-43e7-a94b-c44f4f4ce50d | datos={"pedido_id":13,"cliente_id":46,"total":86.63}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #17
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=275b0205-17a0-428f-839d-82267befa32a | datos={"pago_id":13,"pedido_id":58,"monto":338.6}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=014fe6d2-c658-4b59-9654-b4fdae7d6a05 | datos={"pedido_id":14,"cliente_id":94,"total":171.82}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #18
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=318474af-7d9d-4cfa-b0a0-2d3ff6b54587 | datos={"pago_id":14,"pedido_id":66,"monto":194.87}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #19
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #20
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #11
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #21
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=4e2a840c-ef05-4294-90d1-cec73f84be1e | datos={"pedido_id":15,"cliente_id":6,"total":419.1}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=3f09deb1-a5b3-470b-8871-27d906549e8a | datos={"pago_id":15,"pedido_id":26,"monto":392.24}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #22
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=521e9073-2dab-4ca9-90ef-f146c49afd1c | datos={"pedido_id":16,"cliente_id":25,"total":342.26}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #23
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #12
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=622397eb-f411-4be6-b7d9-d73dd044fed4 | datos={'pedido_id': 17, 'cliente_id': 50, 'total': 344.31}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=f6487dec-b76e-4360-aaae-98dedfe4f94f | datos={"pago_id":16,"pedido_id":80,"monto":277.6}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #13
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=9f9067a1-bc0e-4a74-baf2-428a7a338ad4 | datos={'pedido_id': 18, 'cliente_id': 14, 'total': 81.12}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #24
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=c4968c42-99b7-4608-be15-b37f908a410b | datos={'pedido_id': 19, 'cliente_id': 100, 'total': 376.64}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=622397eb-f411-4be6-b7d9-d73dd044fed4 | datos={"pedido_id":17,"cliente_id":50,"total":344.31}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #25
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #14
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #15
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #16
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #17
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=14601553-7939-48c2-b0a4-f843f9590e47 | datos={'pedido_id': 20, 'cliente_id': 12, 'total': 156.91}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=a84aa881-dce2-4514-a07e-d6c4853d51b2 | datos={"pago_id":17,"pedido_id":97,"monto":340.11}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=9f9067a1-bc0e-4a74-baf2-428a7a338ad4 | datos={"pedido_id":18,"cliente_id":14,"total":81.12}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=79abd847-bd35-4a4f-ab74-19e36c9f01f6 | datos={'pedido_id': 21, 'cliente_id': 28, 'total': 392.8}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #18
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #26
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #27
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=f8d5d597-2f7f-44ff-b8bf-2cc70d029e96 | datos={"pago_id":18,"pedido_id":11,"monto":104.91}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #28
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=c4968c42-99b7-4608-be15-b37f908a410b | datos={"pedido_id":19,"cliente_id":100,"total":376.64}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #19
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=389ed550-9a30-4b79-add4-4c58a7c94798 | datos={"pago_id":19,"pedido_id":84,"monto":298.84}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=34575015-63c5-4919-813a-e06be6570b5b | datos={'pedido_id': 22, 'cliente_id': 1, 'total': 105.62}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #20
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=14601553-7939-48c2-b0a4-f843f9590e47 | datos={"pedido_id":20,"cliente_id":12,"total":156.91}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #21
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=96cb86dd-d530-448d-a2d8-460fc4290c0b | datos={"pago_id":20,"pedido_id":61,"monto":119.39}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #22
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=79abd847-bd35-4a4f-ab74-19e36c9f01f6 | datos={"pedido_id":21,"cliente_id":28,"total":392.8}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #23
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #29
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #24
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #30
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=ac8bfacd-4009-47d7-b42a-aa93ac6bf2be | datos={'pedido_id': 23, 'cliente_id': 9, 'total': 298.26}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=737b3fcc-f434-4189-8e64-a6fc4a95d95e | datos={'pedido_id': 24, 'cliente_id': 81, 'total': 336.08}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=20c48c10-98a2-4181-8992-c5df348c8313 | datos={'pedido_id': 25, 'cliente_id': 19, 'total': 16.04}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #25
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #26
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #27
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=70363f36-7557-4aa1-8e1e-4186e5d32910 | datos={"pago_id":21,"pedido_id":23,"monto":303.73}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=34575015-63c5-4919-813a-e06be6570b5b | datos={"pedido_id":22,"cliente_id":1,"total":105.62}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=2813ab00-c46d-4a34-8de8-7e86c89a9038 | datos={'pedido_id': 26, 'cliente_id': 52, 'total': 461.08}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #31
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=dc43f1ce-b5dc-450b-82c0-b2f71269f772 | datos={'pedido_id': 27, 'cliente_id': 21, 'total': 84.85}
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #32
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=2fac0562-12bf-4812-b010-229977f7e0c7 | datos={"pago_id":22,"pedido_id":35,"monto":74.99}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #28
+prod-pedidos-1      | [prod-pedidos] publicado pedido.creado #33
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=c1957744-66c6-4555-848f-500430785491 | datos={'pedido_id': 28, 'cliente_id': 77, 'total': 96.77}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=8f89922d-134f-453a-b8d6-a940d36c3dd6 | datos={'pedido_id': 29, 'cliente_id': 71, 'total': 31.71}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=ed867d64-1aab-4738-9d34-79ae1b44a19d | datos={'pedido_id': 30, 'cliente_id': 31, 'total': 17.81}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=c2c996a6-23c6-4f40-8389-c60a11c51742 | datos={'pedido_id': 31, 'cliente_id': 89, 'total': 180.82}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=ecad7ec3-3822-405f-8143-fdacac45e23f | datos={'pedido_id': 32, 'cliente_id': 59, 'total': 429.88}
+cons-inventario-1   | [cons-inventario] recibido pedido.creado | id=53ede21d-6ecb-4440-bb51-fe42f2b87628 | datos={'pedido_id': 33, 'cliente_id': 54, 'total': 210.26}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=ac8bfacd-4009-47d7-b42a-aa93ac6bf2be | datos={"pedido_id":23,"cliente_id":9,"total":298.26}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=737b3fcc-f434-4189-8e64-a6fc4a95d95e | datos={"pedido_id":24,"cliente_id":81,"total":336.08}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #29
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=ca5fe770-4fac-41e6-9180-64e18f042f8f | datos={"pago_id":23,"pedido_id":2,"monto":382.22}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=20c48c10-98a2-4181-8992-c5df348c8313 | datos={"pedido_id":25,"cliente_id":19,"total":16.04}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #30
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=2c8711ef-9ece-4f43-97df-bd4c0678970c | datos={"pago_id":24,"pedido_id":40,"monto":491.24}
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #31
+prod-pagos-1        | [prod-pagos] publicado pago.aprobado #32
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=2813ab00-c46d-4a34-8de8-7e86c89a9038 | datos={"pedido_id":26,"cliente_id":52,"total":461.08}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=0ee8b22c-38f4-4cb5-87b4-562581b87db3 | datos={"pago_id":25,"pedido_id":31,"monto":274.85}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=dc43f1ce-b5dc-450b-82c0-b2f71269f772 | datos={"pedido_id":27,"cliente_id":21,"total":84.85}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=66cbb930-95cd-4300-9b54-e1230c5f4a99 | datos={"pago_id":26,"pedido_id":80,"monto":83.95}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=3ea8ef5d-552f-4c82-b13e-4d4b88c6c072 | datos={"pago_id":27,"pedido_id":12,"monto":239.86}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=c1957744-66c6-4555-848f-500430785491 | datos={"pedido_id":28,"cliente_id":77,"total":96.77}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=8f89922d-134f-453a-b8d6-a940d36c3dd6 | datos={"pedido_id":29,"cliente_id":71,"total":31.71}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=35e34165-abf5-4ed7-a306-fc760257f2e5 | datos={"pago_id":28,"pedido_id":37,"monto":183.54}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=ed867d64-1aab-4738-9d34-79ae1b44a19d | datos={"pedido_id":30,"cliente_id":31,"total":17.81}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=9b88d987-b97e-4b4b-85b7-292146d6a183 | datos={"pago_id":29,"pedido_id":59,"monto":159.39}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=c2c996a6-23c6-4f40-8389-c60a11c51742 | datos={"pedido_id":31,"cliente_id":89,"total":180.82}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=445866c3-0c99-4abe-bf41-2d5338e786f2 | datos={"pago_id":30,"pedido_id":23,"monto":73.73}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=ecad7ec3-3822-405f-8143-fdacac45e23f | datos={"pedido_id":32,"cliente_id":59,"total":429.88}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=8981bb01-088c-4c4e-9561-9af4af9a336f | datos={"pago_id":31,"pedido_id":68,"monto":421.89}
+cons-facturacion-1  | [cons-facturacion] recibido pedido.creado | id=53ede21d-6ecb-4440-bb51-fe42f2b87628 | datos={"pedido_id":33,"cliente_id":54,"total":210.26}
+cons-facturacion-1  | [cons-facturacion] recibido pago.aprobado | id=9395d604-e238-4277-9e34-723270e7d6ca | datos={"pago_id":32,"pedido_id":47,"monto":466.71}

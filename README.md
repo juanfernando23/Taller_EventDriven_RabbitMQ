@@ -80,5 +80,3 @@ docker compose up -d
 cd docker/escenario-2/nodo-1        # o docker/escenario-3/nodo-1 y nodo-2
 RABBITMQ_HOST=<IP-del-broker> docker compose up -d --build
 ```
-
-El detalle de cada escenario está en `BITACORA.md`.

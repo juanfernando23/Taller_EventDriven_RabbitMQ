@@ -1,0 +1,13 @@
+# Conexiones establecidas al puerto 5672 del broker (nivel Windows), 2026-10-21 19:43
+10.212.159.56 -> conexiones: 4
+10.212.159.39 -> conexiones: 4
+
+# Contenedores locales (no hay clientes en el broker)
+taller-escenario-3-nodo-3-rabbitmq-1
+okr-oracle-local
+
+# Colas segun la API de RabbitMQ
+cola.auditoria         consumidores=1 entrada=383 ack=383 listos=0
+cola.facturacion       consumidores=1 entrada=193 ack=193 listos=0
+cola.inventario        consumidores=1 entrada=96 ack=96 listos=0
+cola.notificaciones    consumidores=1 entrada=190 ack=190 listos=0

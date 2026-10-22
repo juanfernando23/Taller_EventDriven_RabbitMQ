@@ -1,0 +1,439 @@
+﻿NAME                                              IMAGE                                           COMMAND                  SERVICE               CREATED              STATUS              PORTS
+taller-escenario-2-nodo-1-cons-auditoria-1        taller-escenario-2-nodo-1-cons-auditoria        "consumidor"             cons-auditoria        About a minute ago   Up About a minute   
+taller-escenario-2-nodo-1-cons-facturacion-1      taller-escenario-2-nodo-1-cons-facturacion      "docker-entrypoint.s…"   cons-facturacion      About a minute ago   Up About a minute   
+taller-escenario-2-nodo-1-cons-inventario-1       taller-escenario-2-nodo-1-cons-inventario       "python -u consumido…"   cons-inventario       About a minute ago   Up About a minute   
+taller-escenario-2-nodo-1-cons-notificaciones-1   taller-escenario-2-nodo-1-cons-notificaciones   "/__cacert_entrypoin…"   cons-notificaciones   About a minute ago   Up About a minute   
+taller-escenario-2-nodo-1-prod-inventario-1       taller-escenario-2-nodo-1-prod-inventario       "productor"              prod-inventario       About a minute ago   Up About a minute   
+taller-escenario-2-nodo-1-prod-pagos-1            taller-escenario-2-nodo-1-prod-pagos            "docker-entrypoint.s…"   prod-pagos            About a minute ago   Up About a minute   
+taller-escenario-2-nodo-1-prod-pedidos-1          taller-escenario-2-nodo-1-prod-pedidos          "python -u productor…"   prod-pedidos          About a minute ago   Up About a minute   
+taller-escenario-2-nodo-1-prod-usuarios-1         taller-escenario-2-nodo-1-prod-usuarios         "/__cacert_entrypoin…"   prod-usuarios         About a minute ago   Up About a minute   
+cons-notificaciones-1  | SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+prod-pagos-1           | [prod-pagos] conectado a 10.212.159.66:5672, publicando 'pago.aprobado' cada 3 s
+cons-notificaciones-1  | SLF4J: Defaulting to no-operation (NOP) logger implementation
+cons-notificaciones-1  | SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+cons-notificaciones-1  | [cons-notificaciones] esperando eventos en cola.notificaciones con pago.aprobado, usuario.registrado
+cons-facturacion-1     | [cons-facturacion] esperando eventos en cola.facturacion con pedido.creado, pago.aprobado
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"d5446ade-2743-40eb-89b8-b1b5636cd04d","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:19.126079063Z","datos":{"usuario_id":1,"email":"usuario1@ejemplo.com"}}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=855bea93-5b98-4c94-abf3-197c86b9c230 | datos={"pedido_id":1,"cliente_id":61,"total":250.85}
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #1
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=e10dad4d-bf2f-4673-8206-89569dfb92e8 | datos={"pago_id":1,"pedido_id":9,"monto":493.12}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=95eba62c-9210-4d5e-9196-aa9d8f098444 | datos={"pedido_id":2,"cliente_id":87,"total":153.68}
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #2
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=5a1f5405-0ee3-434b-a25d-e91a29b0624c | datos={"pago_id":2,"pedido_id":12,"monto":29.07}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=43aa94f7-d007-403a-abd4-2c817c599226 | datos={"pedido_id":3,"cliente_id":79,"total":449.42}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=ceffc5bd-5524-412d-a1e6-373781c2774d | datos={"pago_id":3,"pedido_id":43,"monto":458.74}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=9ee4849e-ba26-403e-8631-4acd99c3a3bd | datos={"pedido_id":4,"cliente_id":3,"total":405.81}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=53ad618c-7440-486a-bdfb-d06f6b6123ba | datos={"pago_id":4,"pedido_id":31,"monto":487.96}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=30e1fe43-8dd7-4956-a425-30fe34074d51 | datos={"pedido_id":5,"cliente_id":85,"total":275.66}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=1aae413c-79f3-4c25-b913-1c634f7cd782 | datos={"pago_id":5,"pedido_id":3,"monto":142.84}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"e10dad4d-bf2f-4673-8206-89569dfb92e8","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:21.892Z","datos":{"pago_id":1,"pedido_id":9,"monto":493.12}}
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #3
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #4
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #5
+cons-auditoria-1       | 2026/10/21 21:22:12 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-18-1792617732494011583 | datos=map[producto:SKU-011 stock:3]
+cons-auditoria-1       | 2026/10/21 21:22:12 [cons-auditoria] recibido pago.aprobado | id=737ca2bc-d73e-4787-9c72-ece97b42c07a | datos=map[monto:103.86 pago_id:18 pedido_id:43]
+cons-auditoria-1       | 2026/10/21 21:22:13 [cons-auditoria] recibido pedido.creado | id=37a1a48e-17a2-48ca-92d6-6163057d8c1d | datos=map[cliente_id:16 pedido_id:19 total:218.04]
+cons-auditoria-1       | 2026/10/21 21:22:13 [cons-auditoria] recibido usuario.registrado | id=49729a68-447a-4151-939c-74ee53534128 | datos=map[email:usuario19@ejemplo.com usuario_id:19]
+cons-auditoria-1       | 2026/10/21 21:22:15 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-19-1792617735493421190 | datos=map[producto:SKU-009 stock:74]
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #6
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #7
+prod-pedidos-1         | [prod-pedidos] conectado a 10.212.159.66:5672, publicando 'pedido.creado' cada 3.0 s
+prod-usuarios-1        | SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+prod-usuarios-1        | SLF4J: Defaulting to no-operation (NOP) logger implementation
+prod-usuarios-1        | SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+prod-usuarios-1        | [prod-usuarios] conectado a 10.212.159.66:5672, publicando 'usuario.registrado' cada 3000 ms
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #1
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #2
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #3
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #4
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #5
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #6
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #7
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #8
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #9
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #10
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #11
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #12
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #13
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #14
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #15
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #16
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #17
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #18
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #19
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #20
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #21
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #22
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #23
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #24
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #25
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #26
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #27
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #28
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #29
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #30
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #31
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #32
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #33
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #34
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #35
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #36
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #37
+cons-auditoria-1       | 2026/10/21 21:22:15 [cons-auditoria] recibido pago.aprobado | id=d94c83d2-0346-42c4-9aec-9095f6a0f700 | datos=map[monto:465.73 pago_id:19 pedido_id:25]
+prod-usuarios-1        | [prod-usuarios] publicado usuario.registrado #38
+cons-auditoria-1       | 2026/10/21 21:22:16 [cons-auditoria] recibido pedido.creado | id=4eff3bf1-014d-44b9-a828-50b5cd9ba2aa | datos=map[cliente_id:41 pedido_id:20 total:413.67]
+prod-inventario-1      | 2026/10/21 21:21:18 [prod-inventario] conectado a 10.212.159.66:5672, publicando 'inventario.actualizado' cada 3 s
+cons-auditoria-1       | 2026/10/21 21:22:16 [cons-auditoria] recibido usuario.registrado | id=bd106d41-bfaf-4662-8b89-42ea69a0278d | datos=map[email:usuario20@ejemplo.com usuario_id:20]
+prod-inventario-1      | 2026/10/21 21:21:21 [prod-inventario] publicado inventario.actualizado #1
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #1
+prod-inventario-1      | 2026/10/21 21:21:24 [prod-inventario] publicado inventario.actualizado #2
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #2
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=0af3d62b-ca08-4bf6-8e11-eee5a427ad54 | datos={"pedido_id":6,"cliente_id":80,"total":173.15}
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #3
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=7efc028e-bcbe-4912-a4a9-22c45754a9bd | datos={"pago_id":6,"pedido_id":35,"monto":404.64}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=84cf79e8-b16a-45bc-b476-73c3d052357a | datos={"pedido_id":7,"cliente_id":35,"total":53.62}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=cf534ff1-87b7-4c02-bd50-2aa9077d42c7 | datos={"pago_id":7,"pedido_id":32,"monto":238.14}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=cadef56a-de16-48f3-9d8a-0d7f2d52ceb5 | datos={"pedido_id":8,"cliente_id":21,"total":447.33}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=e0e5612f-dbdc-4de5-bcbf-b243e8c3d8b5 | datos={"pago_id":8,"pedido_id":56,"monto":274.59}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=5c0d9d30-7aff-4744-bc73-cb21dc5437d8 | datos={"pedido_id":9,"cliente_id":40,"total":184.8}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=b99ea90b-863b-4554-871b-091b64de5a1c | datos={"pago_id":9,"pedido_id":28,"monto":480.44}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=9247129f-2982-43bc-a90b-6fb624990a3e | datos={"pedido_id":10,"cliente_id":51,"total":114.14}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=4b010c89-bff2-4b02-9b1d-2069827157c6 | datos={"pago_id":10,"pedido_id":42,"monto":69.86}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=70a3e1e6-5294-4545-8591-e298d8d4b88d | datos={"pedido_id":11,"cliente_id":25,"total":400.97}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=57563189-9d89-491c-be0f-cb17ec3485a7 | datos={"pago_id":11,"pedido_id":64,"monto":101.27}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=66328eb6-7c73-4b34-a623-9f51fb38c11e | datos={"pedido_id":12,"cliente_id":42,"total":157.91}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=b2b7a2c0-8ed3-4ff8-9875-45042fbb7f80 | datos={"pago_id":12,"pedido_id":76,"monto":434.88}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=27e6c3c4-7fac-495f-bd36-9176d2bb3fce | datos={"pedido_id":13,"cliente_id":93,"total":182.07}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=ddb2b7da-f605-4b00-a531-a07a49b820b1 | datos={"pago_id":13,"pedido_id":43,"monto":401.21}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=c9336464-6ff9-4d9e-a10b-9c52dffffb99 | datos={"pedido_id":14,"cliente_id":100,"total":288.84}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=b1a9cfe2-39b5-47be-a472-10f1af72fa5b | datos={"pago_id":14,"pedido_id":40,"monto":48.41}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=03508f3a-510d-4a78-a179-83596a4df95d | datos={"pedido_id":15,"cliente_id":96,"total":230.7}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=83146143-affe-421d-8afe-ac4f05c569e6 | datos={"pago_id":15,"pedido_id":25,"monto":215.71}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=389759fe-c68d-414d-b514-11f4136e39df | datos={"pedido_id":16,"cliente_id":83,"total":448.28}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=d009d935-1860-49a2-93e4-8f4eb279b5f1 | datos={"pago_id":16,"pedido_id":81,"monto":254.24}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=bcca0f48-a37f-4119-9f55-0d44b136d346 | datos={"pedido_id":17,"cliente_id":10,"total":206.8}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=eb075ac2-5ef9-4a8d-a26b-ef642d370d0e | datos={"pago_id":17,"pedido_id":93,"monto":411.5}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=30be3cf0-eb2e-444a-a024-443b462e9778 | datos={"pedido_id":18,"cliente_id":30,"total":344.71}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=737ca2bc-d73e-4787-9c72-ece97b42c07a | datos={"pago_id":18,"pedido_id":43,"monto":103.86}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=37a1a48e-17a2-48ca-92d6-6163057d8c1d | datos={"pedido_id":19,"cliente_id":16,"total":218.04}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=d94c83d2-0346-42c4-9aec-9095f6a0f700 | datos={"pago_id":19,"pedido_id":25,"monto":465.73}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=4eff3bf1-014d-44b9-a828-50b5cd9ba2aa | datos={"pedido_id":20,"cliente_id":41,"total":413.67}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=ad235156-c375-4cbf-8896-4eb0d6e3b26d | datos={"pago_id":20,"pedido_id":82,"monto":147.67}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=e9429b11-8263-4831-965b-51dd561a2b30 | datos={"pedido_id":21,"cliente_id":59,"total":91.48}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=85da9feb-81d3-49be-af1a-dc0470156f46 | datos={"pago_id":21,"pedido_id":34,"monto":58.09}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=31bfd102-ca74-4ea2-8b1a-68392668ff3d | datos={"pedido_id":22,"cliente_id":66,"total":194.51}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=c040166b-06cb-44ee-8690-179668c5bc2e | datos={"pago_id":22,"pedido_id":70,"monto":18.73}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=5a53577a-5685-4454-90b7-03ea254cb21a | datos={"pedido_id":23,"cliente_id":35,"total":427.11}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=0fbfc9e6-4cf4-47e4-bb51-144a9dad4b59 | datos={"pago_id":23,"pedido_id":63,"monto":489.49}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=cc3ad970-1f88-46ce-b50b-022ba3b4d5c9 | datos={"pedido_id":24,"cliente_id":84,"total":179.24}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=996ea4fe-8599-414c-aecd-374149f1ff68 | datos={"pago_id":24,"pedido_id":32,"monto":194.08}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=00570a38-a94d-4c76-8bf5-2d2c50d8846b | datos={"pedido_id":25,"cliente_id":14,"total":149.27}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=d341bcaf-9976-4a42-b4a5-5c9c7e686aac | datos={"pago_id":25,"pedido_id":83,"monto":176.61}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=bc14497f-da4a-4dc7-9890-e488feb7c964 | datos={"pedido_id":26,"cliente_id":83,"total":329.33}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=e09fb49c-d82e-4b05-a126-119fe5b5c5bd | datos={"pago_id":26,"pedido_id":57,"monto":335.41}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=8e6988b8-f725-431a-b160-19dce74ff8f0 | datos={"pedido_id":27,"cliente_id":69,"total":102.55}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=8386383a-1850-4342-97f8-abde07334412 | datos={"pago_id":27,"pedido_id":78,"monto":119.86}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=7b7a5221-e1c5-4a5e-82ea-15ad6ddef19a | datos={"pedido_id":28,"cliente_id":98,"total":16.65}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=55ebf7ef-eeb1-42b6-ab75-a611971bca9d | datos={"pago_id":28,"pedido_id":59,"monto":39.03}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=66ef3e39-db3e-4fa0-8da5-cbe79b27fd00 | datos={"pedido_id":29,"cliente_id":86,"total":498.96}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=78df4c40-fafc-4c81-804c-2cc643411a01 | datos={"pago_id":29,"pedido_id":38,"monto":229.06}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=a9fdfc80-f356-41fb-aa89-42354dbb8ccb | datos={"pedido_id":30,"cliente_id":25,"total":44.54}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=ba4b8095-bae6-4831-ba4a-108248bdeb6c | datos={"pago_id":30,"pedido_id":67,"monto":95.44}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=4ab5d9c4-4781-4dd5-a748-3f47f2b614f5 | datos={"pedido_id":31,"cliente_id":87,"total":487.04}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=0a44aea2-2b05-4381-8a3c-5eee12bcef37 | datos={"pago_id":31,"pedido_id":1,"monto":116.81}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=5099addf-e4d9-4d4f-a220-f14279cb8eb6 | datos={"pedido_id":32,"cliente_id":71,"total":382.66}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=72d2a9db-801c-4bd3-a97e-e04507d9ada3 | datos={"pago_id":32,"pedido_id":76,"monto":119.07}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=6c6c1112-5ebc-4e7c-8ffb-0f207fc3331b | datos={"pedido_id":33,"cliente_id":5,"total":361.47}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=0a98494f-e7cd-41a1-81fd-c2cbb5f504ae | datos={"pago_id":33,"pedido_id":59,"monto":139.44}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=c6a51040-6d59-41c2-9593-c37ecd5af41d | datos={"pedido_id":34,"cliente_id":57,"total":348.63}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=6e944bbe-ae04-461b-a07d-263409d9dd94 | datos={"pago_id":34,"pedido_id":74,"monto":463.25}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=f5336695-a93e-40d8-bbb7-4247d0ea52c7 | datos={"pedido_id":35,"cliente_id":89,"total":36.97}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=01fd1842-b2ae-4120-9e07-60eeeb99a652 | datos={"pago_id":35,"pedido_id":94,"monto":210.89}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=d2c04ef9-b923-434b-8ead-98598b40dfb3 | datos={"pedido_id":36,"cliente_id":13,"total":359.69}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=35dfb70e-10a7-4a4e-af53-38d25e3105ad | datos={"pago_id":36,"pedido_id":70,"monto":132.24}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=0aa85445-a3db-4bf4-b297-b81c22f9a0fa | datos={"pedido_id":37,"cliente_id":88,"total":47.07}
+cons-facturacion-1     | [cons-facturacion] recibido pago.aprobado | id=b2957049-22a8-4320-bc5a-f3f4563ecdb2 | datos={"pago_id":37,"pedido_id":61,"monto":378.83}
+cons-facturacion-1     | [cons-facturacion] recibido pedido.creado | id=8e4a9414-e3fc-4c89-89c8-881da350b5b1 | datos={"pedido_id":38,"cliente_id":39,"total":257.74}
+cons-inventario-1      | [cons-inventario] esperando eventos en cola.inventario con pedido.creado
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=95eba62c-9210-4d5e-9196-aa9d8f098444 | datos={'pedido_id': 2, 'cliente_id': 87, 'total': 153.68}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=43aa94f7-d007-403a-abd4-2c817c599226 | datos={'pedido_id': 3, 'cliente_id': 79, 'total': 449.42}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=9ee4849e-ba26-403e-8631-4acd99c3a3bd | datos={'pedido_id': 4, 'cliente_id': 3, 'total': 405.81}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=30e1fe43-8dd7-4956-a425-30fe34074d51 | datos={'pedido_id': 5, 'cliente_id': 85, 'total': 275.66}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=0af3d62b-ca08-4bf6-8e11-eee5a427ad54 | datos={'pedido_id': 6, 'cliente_id': 80, 'total': 173.15}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=84cf79e8-b16a-45bc-b476-73c3d052357a | datos={'pedido_id': 7, 'cliente_id': 35, 'total': 53.62}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=cadef56a-de16-48f3-9d8a-0d7f2d52ceb5 | datos={'pedido_id': 8, 'cliente_id': 21, 'total': 447.33}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=5c0d9d30-7aff-4744-bc73-cb21dc5437d8 | datos={'pedido_id': 9, 'cliente_id': 40, 'total': 184.8}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=9247129f-2982-43bc-a90b-6fb624990a3e | datos={'pedido_id': 10, 'cliente_id': 51, 'total': 114.14}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=70a3e1e6-5294-4545-8591-e298d8d4b88d | datos={'pedido_id': 11, 'cliente_id': 25, 'total': 400.97}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=66328eb6-7c73-4b34-a623-9f51fb38c11e | datos={'pedido_id': 12, 'cliente_id': 42, 'total': 157.91}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=27e6c3c4-7fac-495f-bd36-9176d2bb3fce | datos={'pedido_id': 13, 'cliente_id': 93, 'total': 182.07}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=c9336464-6ff9-4d9e-a10b-9c52dffffb99 | datos={'pedido_id': 14, 'cliente_id': 100, 'total': 288.84}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=03508f3a-510d-4a78-a179-83596a4df95d | datos={'pedido_id': 15, 'cliente_id': 96, 'total': 230.7}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=389759fe-c68d-414d-b514-11f4136e39df | datos={'pedido_id': 16, 'cliente_id': 83, 'total': 448.28}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=bcca0f48-a37f-4119-9f55-0d44b136d346 | datos={'pedido_id': 17, 'cliente_id': 10, 'total': 206.8}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=30be3cf0-eb2e-444a-a024-443b462e9778 | datos={'pedido_id': 18, 'cliente_id': 30, 'total': 344.71}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=37a1a48e-17a2-48ca-92d6-6163057d8c1d | datos={'pedido_id': 19, 'cliente_id': 16, 'total': 218.04}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=4eff3bf1-014d-44b9-a828-50b5cd9ba2aa | datos={'pedido_id': 20, 'cliente_id': 41, 'total': 413.67}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=e9429b11-8263-4831-965b-51dd561a2b30 | datos={'pedido_id': 21, 'cliente_id': 59, 'total': 91.48}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=31bfd102-ca74-4ea2-8b1a-68392668ff3d | datos={'pedido_id': 22, 'cliente_id': 66, 'total': 194.51}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=5a53577a-5685-4454-90b7-03ea254cb21a | datos={'pedido_id': 23, 'cliente_id': 35, 'total': 427.11}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=cc3ad970-1f88-46ce-b50b-022ba3b4d5c9 | datos={'pedido_id': 24, 'cliente_id': 84, 'total': 179.24}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=00570a38-a94d-4c76-8bf5-2d2c50d8846b | datos={'pedido_id': 25, 'cliente_id': 14, 'total': 149.27}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=bc14497f-da4a-4dc7-9890-e488feb7c964 | datos={'pedido_id': 26, 'cliente_id': 83, 'total': 329.33}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=8e6988b8-f725-431a-b160-19dce74ff8f0 | datos={'pedido_id': 27, 'cliente_id': 69, 'total': 102.55}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=7b7a5221-e1c5-4a5e-82ea-15ad6ddef19a | datos={'pedido_id': 28, 'cliente_id': 98, 'total': 16.65}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=66ef3e39-db3e-4fa0-8da5-cbe79b27fd00 | datos={'pedido_id': 29, 'cliente_id': 86, 'total': 498.96}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=a9fdfc80-f356-41fb-aa89-42354dbb8ccb | datos={'pedido_id': 30, 'cliente_id': 25, 'total': 44.54}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=4ab5d9c4-4781-4dd5-a748-3f47f2b614f5 | datos={'pedido_id': 31, 'cliente_id': 87, 'total': 487.04}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=5099addf-e4d9-4d4f-a220-f14279cb8eb6 | datos={'pedido_id': 32, 'cliente_id': 71, 'total': 382.66}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=6c6c1112-5ebc-4e7c-8ffb-0f207fc3331b | datos={'pedido_id': 33, 'cliente_id': 5, 'total': 361.47}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=c6a51040-6d59-41c2-9593-c37ecd5af41d | datos={'pedido_id': 34, 'cliente_id': 57, 'total': 348.63}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=f5336695-a93e-40d8-bbb7-4247d0ea52c7 | datos={'pedido_id': 35, 'cliente_id': 89, 'total': 36.97}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=d2c04ef9-b923-434b-8ead-98598b40dfb3 | datos={'pedido_id': 36, 'cliente_id': 13, 'total': 359.69}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=0aa85445-a3db-4bf4-b297-b81c22f9a0fa | datos={'pedido_id': 37, 'cliente_id': 88, 'total': 47.07}
+cons-inventario-1      | [cons-inventario] recibido pedido.creado | id=8e4a9414-e3fc-4c89-89c8-881da350b5b1 | datos={'pedido_id': 38, 'cliente_id': 39, 'total': 257.74}
+cons-auditoria-1       | 2026/10/21 21:22:18 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-20-1792617738491724018 | datos=map[producto:SKU-013 stock:60]
+cons-auditoria-1       | 2026/10/21 21:22:18 [cons-auditoria] recibido pago.aprobado | id=ad235156-c375-4cbf-8896-4eb0d6e3b26d | datos=map[monto:147.67 pago_id:20 pedido_id:82]
+cons-auditoria-1       | 2026/10/21 21:22:19 [cons-auditoria] recibido pedido.creado | id=e9429b11-8263-4831-965b-51dd561a2b30 | datos=map[cliente_id:59 pedido_id:21 total:91.48]
+cons-auditoria-1       | 2026/10/21 21:22:19 [cons-auditoria] recibido usuario.registrado | id=a298a95c-96c4-4e90-8ee0-6cede6c03fec | datos=map[email:usuario21@ejemplo.com usuario_id:21]
+cons-auditoria-1       | 2026/10/21 21:22:21 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-21-1792617741491130096 | datos=map[producto:SKU-018 stock:84]
+cons-auditoria-1       | 2026/10/21 21:22:21 [cons-auditoria] recibido pago.aprobado | id=85da9feb-81d3-49be-af1a-dc0470156f46 | datos=map[monto:58.09 pago_id:21 pedido_id:34]
+cons-auditoria-1       | 2026/10/21 21:22:22 [cons-auditoria] recibido pedido.creado | id=31bfd102-ca74-4ea2-8b1a-68392668ff3d | datos=map[cliente_id:66 pedido_id:22 total:194.51]
+cons-auditoria-1       | 2026/10/21 21:22:22 [cons-auditoria] recibido usuario.registrado | id=1552063b-3d64-479f-9766-407aa008d3aa | datos=map[email:usuario22@ejemplo.com usuario_id:22]
+cons-auditoria-1       | 2026/10/21 21:22:24 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-22-1792617744489556394 | datos=map[producto:SKU-014 stock:99]
+cons-auditoria-1       | 2026/10/21 21:22:25 [cons-auditoria] recibido pago.aprobado | id=c040166b-06cb-44ee-8690-179668c5bc2e | datos=map[monto:18.73 pago_id:22 pedido_id:70]
+cons-auditoria-1       | 2026/10/21 21:22:25 [cons-auditoria] recibido pedido.creado | id=5a53577a-5685-4454-90b7-03ea254cb21a | datos=map[cliente_id:35 pedido_id:23 total:427.11]
+cons-auditoria-1       | 2026/10/21 21:22:25 [cons-auditoria] recibido usuario.registrado | id=aee96bbc-f1d7-4d2d-bee6-6b7271b953a0 | datos=map[email:usuario23@ejemplo.com usuario_id:23]
+cons-auditoria-1       | 2026/10/21 21:22:27 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-23-1792617747491111984 | datos=map[producto:SKU-019 stock:55]
+cons-auditoria-1       | 2026/10/21 21:22:27 [cons-auditoria] recibido pago.aprobado | id=0fbfc9e6-4cf4-47e4-bb51-144a9dad4b59 | datos=map[monto:489.49 pago_id:23 pedido_id:63]
+cons-auditoria-1       | 2026/10/21 21:22:28 [cons-auditoria] recibido pedido.creado | id=cc3ad970-1f88-46ce-b50b-022ba3b4d5c9 | datos=map[cliente_id:84 pedido_id:24 total:179.24]
+cons-auditoria-1       | 2026/10/21 21:22:28 [cons-auditoria] recibido usuario.registrado | id=cb04e03e-8326-4401-9707-0b2b2a6cab92 | datos=map[email:usuario24@ejemplo.com usuario_id:24]
+cons-auditoria-1       | 2026/10/21 21:22:30 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-24-1792617750490402377 | datos=map[producto:SKU-019 stock:1]
+cons-auditoria-1       | 2026/10/21 21:22:30 [cons-auditoria] recibido pago.aprobado | id=996ea4fe-8599-414c-aecd-374149f1ff68 | datos=map[monto:194.08 pago_id:24 pedido_id:32]
+cons-auditoria-1       | 2026/10/21 21:22:31 [cons-auditoria] recibido pedido.creado | id=00570a38-a94d-4c76-8bf5-2d2c50d8846b | datos=map[cliente_id:14 pedido_id:25 total:149.27]
+cons-auditoria-1       | 2026/10/21 21:22:31 [cons-auditoria] recibido usuario.registrado | id=a6223f15-47e7-4548-806a-eec6f77e7937 | datos=map[email:usuario25@ejemplo.com usuario_id:25]
+cons-auditoria-1       | 2026/10/21 21:22:33 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-25-1792617753489616880 | datos=map[producto:SKU-007 stock:85]
+cons-auditoria-1       | 2026/10/21 21:22:33 [cons-auditoria] recibido pago.aprobado | id=d341bcaf-9976-4a42-b4a5-5c9c7e686aac | datos=map[monto:176.61 pago_id:25 pedido_id:83]
+cons-auditoria-1       | 2026/10/21 21:22:34 [cons-auditoria] recibido pedido.creado | id=bc14497f-da4a-4dc7-9890-e488feb7c964 | datos=map[cliente_id:83 pedido_id:26 total:329.33]
+cons-auditoria-1       | 2026/10/21 21:22:34 [cons-auditoria] recibido usuario.registrado | id=267a7b5a-4d03-4ad3-b64d-38314da382b9 | datos=map[email:usuario26@ejemplo.com usuario_id:26]
+cons-auditoria-1       | 2026/10/21 21:22:36 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-26-1792617756491341556 | datos=map[producto:SKU-001 stock:100]
+cons-auditoria-1       | 2026/10/21 21:22:36 [cons-auditoria] recibido pago.aprobado | id=e09fb49c-d82e-4b05-a126-119fe5b5c5bd | datos=map[monto:335.41 pago_id:26 pedido_id:57]
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #4
+prod-inventario-1      | 2026/10/21 21:21:27 [prod-inventario] publicado inventario.actualizado #3
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"76b366da-53cb-4969-b28c-4971af26acc9","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:22.131211093Z","datos":{"usuario_id":2,"email":"usuario2@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"5a1f5405-0ee3-434b-a25d-e91a29b0624c","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:24.894Z","datos":{"pago_id":2,"pedido_id":12,"monto":29.07}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"0759bd01-d53c-4b7c-a32b-83f92bd685e1","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:25.132279314Z","datos":{"usuario_id":3,"email":"usuario3@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"ceffc5bd-5524-412d-a1e6-373781c2774d","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:27.895Z","datos":{"pago_id":3,"pedido_id":43,"monto":458.74}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"f0a2ffaf-8a6f-456a-ac94-f64c5bf7b388","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:28.133953988Z","datos":{"usuario_id":4,"email":"usuario4@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"53ad618c-7440-486a-bdfb-d06f6b6123ba","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:30.898Z","datos":{"pago_id":4,"pedido_id":31,"monto":487.96}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"f43b5bcd-9511-4255-8ab1-e332242fbc30","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:31.135073588Z","datos":{"usuario_id":5,"email":"usuario5@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"1aae413c-79f3-4c25-b913-1c634f7cd782","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:33.902Z","datos":{"pago_id":5,"pedido_id":3,"monto":142.84}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"1a105467-1002-4747-af7b-c39a8e3188dc","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:34.136576329Z","datos":{"usuario_id":6,"email":"usuario6@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"7efc028e-bcbe-4912-a4a9-22c45754a9bd","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:36.904Z","datos":{"pago_id":6,"pedido_id":35,"monto":404.64}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"b9e252ca-cd1d-4ada-80d7-11c46869ee4e","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:37.137751533Z","datos":{"usuario_id":7,"email":"usuario7@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"cf534ff1-87b7-4c02-bd50-2aa9077d42c7","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:39.907Z","datos":{"pago_id":7,"pedido_id":32,"monto":238.14}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"2389967a-0da7-4b0a-9d4f-d7a0eb9e14e3","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:40.139681595Z","datos":{"usuario_id":8,"email":"usuario8@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"e0e5612f-dbdc-4de5-bcbf-b243e8c3d8b5","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:42.911Z","datos":{"pago_id":8,"pedido_id":56,"monto":274.59}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"8d0b3e8a-475b-4675-8550-210120e7ef94","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:43.141255548Z","datos":{"usuario_id":9,"email":"usuario9@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"b99ea90b-863b-4554-871b-091b64de5a1c","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:45.915Z","datos":{"pago_id":9,"pedido_id":28,"monto":480.44}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"c70238b8-a81d-4c59-9c06-891be803c95e","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:46.142547024Z","datos":{"usuario_id":10,"email":"usuario10@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"4b010c89-bff2-4b02-9b1d-2069827157c6","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:48.915Z","datos":{"pago_id":10,"pedido_id":42,"monto":69.86}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"81a7d070-d0b6-4930-a3c4-692a2bd082c3","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:49.143820613Z","datos":{"usuario_id":11,"email":"usuario11@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"57563189-9d89-491c-be0f-cb17ec3485a7","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:51.915Z","datos":{"pago_id":11,"pedido_id":64,"monto":101.27}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"8faf830b-1982-4568-8ec2-91c47bef8792","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:52.141832177Z","datos":{"usuario_id":12,"email":"usuario12@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"b2b7a2c0-8ed3-4ff8-9875-45042fbb7f80","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:54.917Z","datos":{"pago_id":12,"pedido_id":76,"monto":434.88}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"31e3cfb0-c9c7-4866-aa76-30ecc15eaeb0","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:55.143560627Z","datos":{"usuario_id":13,"email":"usuario13@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"ddb2b7da-f605-4b00-a531-a07a49b820b1","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:21:57.921Z","datos":{"pago_id":13,"pedido_id":43,"monto":401.21}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"59b2744b-77f4-482c-aae2-14604d886b4e","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:21:58.144733866Z","datos":{"usuario_id":14,"email":"usuario14@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"b1a9cfe2-39b5-47be-a472-10f1af72fa5b","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:00.923Z","datos":{"pago_id":14,"pedido_id":40,"monto":48.41}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"defb075d-d4d4-4b87-bd5f-36c3bd1efe81","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:01.146273535Z","datos":{"usuario_id":15,"email":"usuario15@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"83146143-affe-421d-8afe-ac4f05c569e6","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:03.927Z","datos":{"pago_id":15,"pedido_id":25,"monto":215.71}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"b6c9ec0b-de85-46bc-a0f7-9b0dfa4b9486","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:04.147998636Z","datos":{"usuario_id":16,"email":"usuario16@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"d009d935-1860-49a2-93e4-8f4eb279b5f1","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:06.930Z","datos":{"pago_id":16,"pedido_id":81,"monto":254.24}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"5b35385d-b1a8-4c99-91ea-ddd60e01ba02","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:07.149279359Z","datos":{"usuario_id":17,"email":"usuario17@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"eb075ac2-5ef9-4a8d-a26b-ef642d370d0e","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:09.934Z","datos":{"pago_id":17,"pedido_id":93,"monto":411.5}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"54a1c5f4-5a14-4e40-9d0f-6e9ca564e396","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:10.150405866Z","datos":{"usuario_id":18,"email":"usuario18@ejemplo.com"}}
+prod-inventario-1      | 2026/10/21 21:21:30 [prod-inventario] publicado inventario.actualizado #4
+prod-inventario-1      | 2026/10/21 21:21:33 [prod-inventario] publicado inventario.actualizado #5
+prod-inventario-1      | 2026/10/21 21:21:36 [prod-inventario] publicado inventario.actualizado #6
+prod-inventario-1      | 2026/10/21 21:21:39 [prod-inventario] publicado inventario.actualizado #7
+prod-inventario-1      | 2026/10/21 21:21:42 [prod-inventario] publicado inventario.actualizado #8
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"737ca2bc-d73e-4787-9c72-ece97b42c07a","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:12.936Z","datos":{"pago_id":18,"pedido_id":43,"monto":103.86}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"49729a68-447a-4151-939c-74ee53534128","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:13.151661985Z","datos":{"usuario_id":19,"email":"usuario19@ejemplo.com"}}
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #5
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"d94c83d2-0346-42c4-9aec-9095f6a0f700","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:15.939Z","datos":{"pago_id":19,"pedido_id":25,"monto":465.73}}
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #6
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #7
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #8
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"bd106d41-bfaf-4662-8b89-42ea69a0278d","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:16.152800320Z","datos":{"usuario_id":20,"email":"usuario20@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"ad235156-c375-4cbf-8896-4eb0d6e3b26d","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:18.940Z","datos":{"pago_id":20,"pedido_id":82,"monto":147.67}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"a298a95c-96c4-4e90-8ee0-6cede6c03fec","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:19.154344295Z","datos":{"usuario_id":21,"email":"usuario21@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"85da9feb-81d3-49be-af1a-dc0470156f46","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:21.941Z","datos":{"pago_id":21,"pedido_id":34,"monto":58.09}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"1552063b-3d64-479f-9766-407aa008d3aa","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:22.152666998Z","datos":{"usuario_id":22,"email":"usuario22@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"c040166b-06cb-44ee-8690-179668c5bc2e","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:24.944Z","datos":{"pago_id":22,"pedido_id":70,"monto":18.73}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"aee96bbc-f1d7-4d2d-bee6-6b7271b953a0","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:25.154227190Z","datos":{"usuario_id":23,"email":"usuario23@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"0fbfc9e6-4cf4-47e4-bb51-144a9dad4b59","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:27.948Z","datos":{"pago_id":23,"pedido_id":63,"monto":489.49}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"cb04e03e-8326-4401-9707-0b2b2a6cab92","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:28.155430921Z","datos":{"usuario_id":24,"email":"usuario24@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"996ea4fe-8599-414c-aecd-374149f1ff68","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:30.951Z","datos":{"pago_id":24,"pedido_id":32,"monto":194.08}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"a6223f15-47e7-4548-806a-eec6f77e7937","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:31.157021940Z","datos":{"usuario_id":25,"email":"usuario25@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"d341bcaf-9976-4a42-b4a5-5c9c7e686aac","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:33.954Z","datos":{"pago_id":25,"pedido_id":83,"monto":176.61}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"267a7b5a-4d03-4ad3-b64d-38314da382b9","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:34.158438693Z","datos":{"usuario_id":26,"email":"usuario26@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"e09fb49c-d82e-4b05-a126-119fe5b5c5bd","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:36.958Z","datos":{"pago_id":26,"pedido_id":57,"monto":335.41}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"687053ec-7487-4ece-bb55-ddf52648b5cb","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:37.159894001Z","datos":{"usuario_id":27,"email":"usuario27@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"8386383a-1850-4342-97f8-abde07334412","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:39.961Z","datos":{"pago_id":27,"pedido_id":78,"monto":119.86}}
+prod-inventario-1      | 2026/10/21 21:21:45 [prod-inventario] publicado inventario.actualizado #9
+prod-inventario-1      | 2026/10/21 21:21:48 [prod-inventario] publicado inventario.actualizado #10
+prod-inventario-1      | 2026/10/21 21:21:51 [prod-inventario] publicado inventario.actualizado #11
+prod-inventario-1      | 2026/10/21 21:21:54 [prod-inventario] publicado inventario.actualizado #12
+prod-inventario-1      | 2026/10/21 21:21:57 [prod-inventario] publicado inventario.actualizado #13
+prod-inventario-1      | 2026/10/21 21:22:00 [prod-inventario] publicado inventario.actualizado #14
+prod-inventario-1      | 2026/10/21 21:22:03 [prod-inventario] publicado inventario.actualizado #15
+prod-inventario-1      | 2026/10/21 21:22:06 [prod-inventario] publicado inventario.actualizado #16
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #9
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #10
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #11
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #12
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #13
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #14
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #15
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #16
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #17
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #18
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #19
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #20
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #21
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #22
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #23
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #24
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #25
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #26
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #27
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #28
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #29
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #30
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #31
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #32
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #33
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #34
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #35
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #36
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #37
+prod-pedidos-1         | [prod-pedidos] publicado pedido.creado #38
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #8
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #9
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #10
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #11
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #12
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #13
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #14
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #15
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #16
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #17
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #18
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #19
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #20
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #21
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #22
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #23
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #24
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #25
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #26
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #27
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #28
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #29
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #30
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #31
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #32
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #33
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #34
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #35
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #36
+prod-pagos-1           | [prod-pagos] publicado pago.aprobado #37
+prod-inventario-1      | 2026/10/21 21:22:09 [prod-inventario] publicado inventario.actualizado #17
+prod-inventario-1      | 2026/10/21 21:22:12 [prod-inventario] publicado inventario.actualizado #18
+cons-auditoria-1       | 2026/10/21 21:22:37 [cons-auditoria] recibido pedido.creado | id=8e6988b8-f725-431a-b160-19dce74ff8f0 | datos=map[cliente_id:69 pedido_id:27 total:102.55]
+cons-auditoria-1       | 2026/10/21 21:22:37 [cons-auditoria] recibido usuario.registrado | id=687053ec-7487-4ece-bb55-ddf52648b5cb | datos=map[email:usuario27@ejemplo.com usuario_id:27]
+cons-auditoria-1       | 2026/10/21 21:22:39 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-27-1792617759489563754 | datos=map[producto:SKU-020 stock:30]
+cons-auditoria-1       | 2026/10/21 21:22:39 [cons-auditoria] recibido pago.aprobado | id=8386383a-1850-4342-97f8-abde07334412 | datos=map[monto:119.86 pago_id:27 pedido_id:78]
+cons-auditoria-1       | 2026/10/21 21:22:40 [cons-auditoria] recibido pedido.creado | id=7b7a5221-e1c5-4a5e-82ea-15ad6ddef19a | datos=map[cliente_id:98 pedido_id:28 total:16.65]
+cons-auditoria-1       | 2026/10/21 21:22:40 [cons-auditoria] recibido usuario.registrado | id=2aef03b7-c3b8-48d4-a87f-745bed1f759c | datos=map[email:usuario28@ejemplo.com usuario_id:28]
+cons-auditoria-1       | 2026/10/21 21:22:42 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-28-1792617762490830417 | datos=map[producto:SKU-004 stock:41]
+cons-auditoria-1       | 2026/10/21 21:22:42 [cons-auditoria] recibido pago.aprobado | id=55ebf7ef-eeb1-42b6-ab75-a611971bca9d | datos=map[monto:39.03 pago_id:28 pedido_id:59]
+cons-auditoria-1       | 2026/10/21 21:22:43 [cons-auditoria] recibido pedido.creado | id=66ef3e39-db3e-4fa0-8da5-cbe79b27fd00 | datos=map[cliente_id:86 pedido_id:29 total:498.96]
+cons-auditoria-1       | 2026/10/21 21:22:43 [cons-auditoria] recibido usuario.registrado | id=09803716-baff-40bc-b220-eaa96bb2d9cc | datos=map[email:usuario29@ejemplo.com usuario_id:29]
+cons-auditoria-1       | 2026/10/21 21:22:45 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-29-1792617765489710157 | datos=map[producto:SKU-015 stock:89]
+cons-auditoria-1       | 2026/10/21 21:22:45 [cons-auditoria] recibido pago.aprobado | id=78df4c40-fafc-4c81-804c-2cc643411a01 | datos=map[monto:229.06 pago_id:29 pedido_id:38]
+cons-auditoria-1       | 2026/10/21 21:22:46 [cons-auditoria] recibido pedido.creado | id=a9fdfc80-f356-41fb-aa89-42354dbb8ccb | datos=map[cliente_id:25 pedido_id:30 total:44.54]
+cons-auditoria-1       | 2026/10/21 21:22:46 [cons-auditoria] recibido usuario.registrado | id=41a4b3f7-ffc0-4083-8ed9-0a8eb1191195 | datos=map[email:usuario30@ejemplo.com usuario_id:30]
+cons-auditoria-1       | 2026/10/21 21:22:48 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-30-1792617768488706313 | datos=map[producto:SKU-010 stock:68]
+cons-auditoria-1       | 2026/10/21 21:22:48 [cons-auditoria] recibido pago.aprobado | id=ba4b8095-bae6-4831-ba4a-108248bdeb6c | datos=map[monto:95.44 pago_id:30 pedido_id:67]
+cons-auditoria-1       | 2026/10/21 21:22:49 [cons-auditoria] recibido pedido.creado | id=4ab5d9c4-4781-4dd5-a748-3f47f2b614f5 | datos=map[cliente_id:87 pedido_id:31 total:487.04]
+cons-auditoria-1       | 2026/10/21 21:22:49 [cons-auditoria] recibido usuario.registrado | id=f17b1a1d-15b7-40ee-9814-d9d381e15b8c | datos=map[email:usuario31@ejemplo.com usuario_id:31]
+prod-inventario-1      | 2026/10/21 21:22:15 [prod-inventario] publicado inventario.actualizado #19
+prod-inventario-1      | 2026/10/21 21:22:18 [prod-inventario] publicado inventario.actualizado #20
+prod-inventario-1      | 2026/10/21 21:22:21 [prod-inventario] publicado inventario.actualizado #21
+prod-inventario-1      | 2026/10/21 21:22:24 [prod-inventario] publicado inventario.actualizado #22
+prod-inventario-1      | 2026/10/21 21:22:27 [prod-inventario] publicado inventario.actualizado #23
+prod-inventario-1      | 2026/10/21 21:22:30 [prod-inventario] publicado inventario.actualizado #24
+prod-inventario-1      | 2026/10/21 21:22:33 [prod-inventario] publicado inventario.actualizado #25
+prod-inventario-1      | 2026/10/21 21:22:36 [prod-inventario] publicado inventario.actualizado #26
+prod-inventario-1      | 2026/10/21 21:22:39 [prod-inventario] publicado inventario.actualizado #27
+prod-inventario-1      | 2026/10/21 21:22:42 [prod-inventario] publicado inventario.actualizado #28
+prod-inventario-1      | 2026/10/21 21:22:45 [prod-inventario] publicado inventario.actualizado #29
+prod-inventario-1      | 2026/10/21 21:22:48 [prod-inventario] publicado inventario.actualizado #30
+prod-inventario-1      | 2026/10/21 21:22:51 [prod-inventario] publicado inventario.actualizado #31
+prod-inventario-1      | 2026/10/21 21:22:54 [prod-inventario] publicado inventario.actualizado #32
+prod-inventario-1      | 2026/10/21 21:22:57 [prod-inventario] publicado inventario.actualizado #33
+prod-inventario-1      | 2026/10/21 21:23:00 [prod-inventario] publicado inventario.actualizado #34
+prod-inventario-1      | 2026/10/21 21:23:03 [prod-inventario] publicado inventario.actualizado #35
+prod-inventario-1      | 2026/10/21 21:23:06 [prod-inventario] publicado inventario.actualizado #36
+prod-inventario-1      | 2026/10/21 21:23:09 [prod-inventario] publicado inventario.actualizado #37
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"2aef03b7-c3b8-48d4-a87f-745bed1f759c","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:40.161354007Z","datos":{"usuario_id":28,"email":"usuario28@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"55ebf7ef-eeb1-42b6-ab75-a611971bca9d","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:42.964Z","datos":{"pago_id":28,"pedido_id":59,"monto":39.03}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"09803716-baff-40bc-b220-eaa96bb2d9cc","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:43.162789840Z","datos":{"usuario_id":29,"email":"usuario29@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"78df4c40-fafc-4c81-804c-2cc643411a01","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:45.967Z","datos":{"pago_id":29,"pedido_id":38,"monto":229.06}}
+cons-auditoria-1       | 2026/10/21 21:22:51 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-31-1792617771487752877 | datos=map[producto:SKU-020 stock:33]
+cons-auditoria-1       | 2026/10/21 21:22:51 [cons-auditoria] recibido pago.aprobado | id=0a44aea2-2b05-4381-8a3c-5eee12bcef37 | datos=map[monto:116.81 pago_id:31 pedido_id:1]
+cons-auditoria-1       | 2026/10/21 21:22:52 [cons-auditoria] recibido pedido.creado | id=5099addf-e4d9-4d4f-a220-f14279cb8eb6 | datos=map[cliente_id:71 pedido_id:32 total:382.66]
+cons-auditoria-1       | 2026/10/21 21:22:52 [cons-auditoria] recibido usuario.registrado | id=fa78c66e-59b1-4717-929b-ef1aa4fed124 | datos=map[email:usuario32@ejemplo.com usuario_id:32]
+cons-auditoria-1       | 2026/10/21 21:22:54 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-32-1792617774485784729 | datos=map[producto:SKU-019 stock:7]
+cons-auditoria-1       | 2026/10/21 21:22:54 [cons-auditoria] recibido pago.aprobado | id=72d2a9db-801c-4bd3-a97e-e04507d9ada3 | datos=map[monto:119.07 pago_id:32 pedido_id:76]
+cons-auditoria-1       | 2026/10/21 21:22:55 [cons-auditoria] recibido pedido.creado | id=6c6c1112-5ebc-4e7c-8ffb-0f207fc3331b | datos=map[cliente_id:5 pedido_id:33 total:361.47]
+cons-auditoria-1       | 2026/10/21 21:22:55 [cons-auditoria] recibido usuario.registrado | id=893f1a28-4676-47d0-90ee-722b49089db8 | datos=map[email:usuario33@ejemplo.com usuario_id:33]
+cons-auditoria-1       | 2026/10/21 21:22:57 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-33-1792617777488083296 | datos=map[producto:SKU-004 stock:93]
+cons-auditoria-1       | 2026/10/21 21:22:58 [cons-auditoria] recibido pago.aprobado | id=0a98494f-e7cd-41a1-81fd-c2cbb5f504ae | datos=map[monto:139.44 pago_id:33 pedido_id:59]
+cons-auditoria-1       | 2026/10/21 21:22:58 [cons-auditoria] recibido pedido.creado | id=c6a51040-6d59-41c2-9593-c37ecd5af41d | datos=map[cliente_id:57 pedido_id:34 total:348.63]
+cons-auditoria-1       | 2026/10/21 21:22:58 [cons-auditoria] recibido usuario.registrado | id=04db644a-63f4-434e-b954-20600de2d5ce | datos=map[email:usuario34@ejemplo.com usuario_id:34]
+cons-auditoria-1       | 2026/10/21 21:23:00 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-34-1792617780486286942 | datos=map[producto:SKU-018 stock:55]
+cons-auditoria-1       | 2026/10/21 21:23:00 [cons-auditoria] recibido pago.aprobado | id=6e944bbe-ae04-461b-a07d-263409d9dd94 | datos=map[monto:463.25 pago_id:34 pedido_id:74]
+cons-auditoria-1       | 2026/10/21 21:23:01 [cons-auditoria] recibido pedido.creado | id=f5336695-a93e-40d8-bbb7-4247d0ea52c7 | datos=map[cliente_id:89 pedido_id:35 total:36.97]
+cons-auditoria-1       | 2026/10/21 21:23:01 [cons-auditoria] recibido usuario.registrado | id=c16bede7-6666-47c8-ae20-927886884dfb | datos=map[email:usuario35@ejemplo.com usuario_id:35]
+cons-auditoria-1       | 2026/10/21 21:23:03 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-35-1792617783485386824 | datos=map[producto:SKU-012 stock:55]
+cons-auditoria-1       | 2026/10/21 21:23:04 [cons-auditoria] recibido pago.aprobado | id=01fd1842-b2ae-4120-9e07-60eeeb99a652 | datos=map[monto:210.89 pago_id:35 pedido_id:94]
+cons-auditoria-1       | 2026/10/21 21:23:04 [cons-auditoria] recibido pedido.creado | id=d2c04ef9-b923-434b-8ead-98598b40dfb3 | datos=map[cliente_id:13 pedido_id:36 total:359.69]
+cons-auditoria-1       | 2026/10/21 21:23:04 [cons-auditoria] recibido usuario.registrado | id=22c488bf-26e5-48be-a309-69eb2362667a | datos=map[email:usuario36@ejemplo.com usuario_id:36]
+cons-auditoria-1       | 2026/10/21 21:23:06 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-36-1792617786488102063 | datos=map[producto:SKU-020 stock:63]
+cons-auditoria-1       | 2026/10/21 21:23:06 [cons-auditoria] recibido pago.aprobado | id=35dfb70e-10a7-4a4e-af53-38d25e3105ad | datos=map[monto:132.24 pago_id:36 pedido_id:70]
+cons-auditoria-1       | 2026/10/21 21:23:07 [cons-auditoria] recibido pedido.creado | id=0aa85445-a3db-4bf4-b297-b81c22f9a0fa | datos=map[cliente_id:88 pedido_id:37 total:47.07]
+cons-auditoria-1       | 2026/10/21 21:23:07 [cons-auditoria] recibido usuario.registrado | id=8eda91d4-8115-4e5d-a58b-f6b0da0ca547 | datos=map[email:usuario37@ejemplo.com usuario_id:37]
+cons-auditoria-1       | 2026/10/21 21:23:09 [cons-auditoria] recibido inventario.actualizado | id=prod-inventario-37-1792617789485738563 | datos=map[producto:SKU-011 stock:24]
+cons-auditoria-1       | 2026/10/21 21:23:10 [cons-auditoria] recibido pago.aprobado | id=b2957049-22a8-4320-bc5a-f3f4563ecdb2 | datos=map[monto:378.83 pago_id:37 pedido_id:61]
+cons-auditoria-1       | 2026/10/21 21:23:10 [cons-auditoria] recibido pedido.creado | id=8e4a9414-e3fc-4c89-89c8-881da350b5b1 | datos=map[cliente_id:39 pedido_id:38 total:257.74]
+cons-auditoria-1       | 2026/10/21 21:23:10 [cons-auditoria] recibido usuario.registrado | id=05dfe157-3100-45ae-9b89-4fc8d7df3804 | datos=map[email:usuario38@ejemplo.com usuario_id:38]
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"41a4b3f7-ffc0-4083-8ed9-0a8eb1191195","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:46.164015064Z","datos":{"usuario_id":30,"email":"usuario30@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"ba4b8095-bae6-4831-ba4a-108248bdeb6c","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:48.967Z","datos":{"pago_id":30,"pedido_id":67,"monto":95.44}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"f17b1a1d-15b7-40ee-9814-d9d381e15b8c","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:49.165444248Z","datos":{"usuario_id":31,"email":"usuario31@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"0a44aea2-2b05-4381-8a3c-5eee12bcef37","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:51.967Z","datos":{"pago_id":31,"pedido_id":1,"monto":116.81}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"fa78c66e-59b1-4717-929b-ef1aa4fed124","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:52.163294800Z","datos":{"usuario_id":32,"email":"usuario32@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"72d2a9db-801c-4bd3-a97e-e04507d9ada3","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:54.971Z","datos":{"pago_id":32,"pedido_id":76,"monto":119.07}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"893f1a28-4676-47d0-90ee-722b49089db8","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:55.164744804Z","datos":{"usuario_id":33,"email":"usuario33@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"0a98494f-e7cd-41a1-81fd-c2cbb5f504ae","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:22:57.974Z","datos":{"pago_id":33,"pedido_id":59,"monto":139.44}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"04db644a-63f4-434e-b954-20600de2d5ce","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:22:58.166417161Z","datos":{"usuario_id":34,"email":"usuario34@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"6e944bbe-ae04-461b-a07d-263409d9dd94","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:23:00.977Z","datos":{"pago_id":34,"pedido_id":74,"monto":463.25}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"c16bede7-6666-47c8-ae20-927886884dfb","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:23:01.167871817Z","datos":{"usuario_id":35,"email":"usuario35@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"01fd1842-b2ae-4120-9e07-60eeeb99a652","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:23:03.980Z","datos":{"pago_id":35,"pedido_id":94,"monto":210.89}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"22c488bf-26e5-48be-a309-69eb2362667a","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:23:04.169426834Z","datos":{"usuario_id":36,"email":"usuario36@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"35dfb70e-10a7-4a4e-af53-38d25e3105ad","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:23:06.984Z","datos":{"pago_id":36,"pedido_id":70,"monto":132.24}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"8eda91d4-8115-4e5d-a58b-f6b0da0ca547","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:23:07.171654986Z","datos":{"usuario_id":37,"email":"usuario37@ejemplo.com"}}
+cons-notificaciones-1  | [cons-notificaciones] recibido pago.aprobado | {"id":"b2957049-22a8-4320-bc5a-f3f4563ecdb2","evento":"pago.aprobado","origen":"prod-pagos","fecha":"2026-10-21T21:23:09.987Z","datos":{"pago_id":37,"pedido_id":61,"monto":378.83}}
+cons-notificaciones-1  | [cons-notificaciones] recibido usuario.registrado | {"id":"05dfe157-3100-45ae-9b89-4fc8d7df3804","evento":"usuario.registrado","origen":"prod-usuarios","fecha":"2026-10-21T21:23:10.173140734Z","datos":{"usuario_id":38,"email":"usuario38@ejemplo.com"}}

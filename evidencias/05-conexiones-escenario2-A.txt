@@ -1,0 +1,9 @@
+# Conexiones establecidas al puerto 5672 del broker (nivel Windows), 2026-10-21 16:26
+10.212.159.56 -> conexiones: 8
+
+# Contenedores locales (no hay clientes en el broker)
+taller-escenario-2-nodo-2-rabbitmq-1
+okr-oracle-local
+
+# Conexiones segun la API de RabbitMQ (origen = gateway interno de Docker)
+8 conexiones {'172.23.0.1': 8}

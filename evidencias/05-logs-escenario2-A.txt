@@ -1,0 +1,80 @@
+rabbitmq-1  | 2026-10-21 21:06:45.816711+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+rabbitmq-1  | 2026-10-21 21:06:45.816809+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+rabbitmq-1  | 2026-10-21 21:06:45.825025+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+rabbitmq-1  | 2026-10-21 21:06:45.825194+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+rabbitmq-1  | 2026-10-21 21:06:45.825295+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+rabbitmq-1  | 2026-10-21 21:06:45.825345+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+rabbitmq-1  | 2026-10-21 21:06:45.825376+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.825601+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.838947+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.839038+00:00 [info] <0.254.0> Will seed default virtual host and user...[0m
+rabbitmq-1  | 2026-10-21 21:06:45.839101+00:00 [info] <0.254.0> Adding vhost '/' (description: 'Default virtual host', tags: [])[0m
+rabbitmq-1  | 2026-10-21 21:06:45.886357+00:00 [info] <0.634.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@e5a489c70e67/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+rabbitmq-1  | 2026-10-21 21:06:45.887676+00:00 [info] <0.634.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.905361+00:00 [info] <0.634.0> Starting message stores for vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.905585+00:00 [info] <0.643.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+rabbitmq-1  | 2026-10-21 21:06:45.908257+00:00 [info] <0.634.0> Started message store of type transient for vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.908567+00:00 [info] <0.647.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:45.909283+00:00 [warning] <0.647.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch[0m
+rabbitmq-1  | 2026-10-21 21:06:45.910155+00:00 [info] <0.634.0> Started message store of type persistent for vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.910308+00:00 [info] <0.634.0> Recovering 0 queues of type rabbit_classic_queue took 21ms[0m
+rabbitmq-1  | 2026-10-21 21:06:45.910353+00:00 [info] <0.634.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+rabbitmq-1  | 2026-10-21 21:06:45.910410+00:00 [info] <0.634.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+rabbitmq-1  | 2026-10-21 21:06:45.918128+00:00 [info] <0.254.0> Created user 'taller'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.924310+00:00 [info] <0.254.0> Successfully set user tags for user 'taller' to [administrator][0m
+rabbitmq-1  | 2026-10-21 21:06:45.929967+00:00 [info] <0.254.0> Successfully set permissions for user 'taller' in virtual host '/' to '.*', '.*', '.*'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930057+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930101+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930118+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930345+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930508+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930564+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930581+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930646+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930680+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930784+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.930840+00:00 [info] <0.315.0> Starting worker pool 'definition_import_pool' with 8 processes in it[0m
+rabbitmq-1  | 2026-10-21 21:06:45.931225+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.931306+00:00 [info] <0.254.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-xZLvay01PLCbEQ39wPEbvg'[0m
+rabbitmq-1  | 2026-10-21 21:06:45.936247+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.936453+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+rabbitmq-1  | 2026-10-21 21:06:45.936526+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+rabbitmq-1  | 2026-10-21 21:06:45.936700+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+rabbitmq-1  | 2026-10-21 21:06:45.936845+00:00 [info] <0.688.0> Resetting node maintenance status[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:46.132732+00:00 [warning] <0.717.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:46.132732+00:00 [warning] <0.717.0> By default, this feature can still be used for now.[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:46.132732+00:00 [warning] <0.717.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:46.132732+00:00 [warning] <0.717.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:46.132732+00:00 [warning] <0.717.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:46.132732+00:00 [warning] <0.717.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+rabbitmq-1  | [38;5;214m2026-10-21 21:06:46.132732+00:00 [warning] <0.717.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+rabbitmq-1  | 2026-10-21 21:06:49.596568+00:00 [info] <0.754.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+rabbitmq-1  | 2026-10-21 21:06:49.596699+00:00 [info] <0.784.0> Statistics database started.[0m
+rabbitmq-1  | 2026-10-21 21:06:49.596778+00:00 [info] <0.783.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+rabbitmq-1  | 2026-10-21 21:06:49.606914+00:00 [info] <0.802.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+rabbitmq-1  | 2026-10-21 21:06:49.607175+00:00 [info] <0.688.0> Ready to start client connection listeners[0m
+rabbitmq-1  | 2026-10-21 21:06:49.609574+00:00 [info] <0.846.0> started TCP listener on [::]:5672[0m
+rabbitmq-1  |  completed with 5 plugins.
+rabbitmq-1  | 2026-10-21 21:06:49.707290+00:00 [info] <0.688.0> Server startup complete; 5 plugins started.[0m
+rabbitmq-1  | 2026-10-21 21:06:49.707290+00:00 [info] <0.688.0>  * rabbitmq_prometheus[0m
+rabbitmq-1  | 2026-10-21 21:06:49.707290+00:00 [info] <0.688.0>  * rabbitmq_federation[0m
+rabbitmq-1  | 2026-10-21 21:06:49.707290+00:00 [info] <0.688.0>  * rabbitmq_management[0m
+rabbitmq-1  | 2026-10-21 21:06:49.707290+00:00 [info] <0.688.0>  * rabbitmq_management_agent[0m
+rabbitmq-1  | 2026-10-21 21:06:49.707290+00:00 [info] <0.688.0>  * rabbitmq_web_dispatch[0m
+rabbitmq-1  | 2026-10-21 21:06:49.752134+00:00 [info] <0.9.0> Time to start RabbitMQ: 9412 ms[0m
+rabbitmq-1  | 2026-10-21 21:21:14.552656+00:00 [info] <0.931.0> accepting AMQP connection <0.931.0> (172.23.0.1:39060 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:14.623280+00:00 [info] <0.931.0> connection <0.931.0> (172.23.0.1:39060 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:21:14.695561+00:00 [info] <0.949.0> accepting AMQP connection <0.949.0> (172.23.0.1:39066 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:14.740627+00:00 [info] <0.949.0> connection <0.949.0> (172.23.0.1:39066 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:21:14.927552+00:00 [info] <0.965.0> accepting AMQP connection <0.965.0> (172.23.0.1:39070 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:14.963317+00:00 [info] <0.968.0> accepting AMQP connection <0.968.0> (172.23.0.1:39086 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:14.973535+00:00 [info] <0.965.0> connection <0.965.0> (172.23.0.1:39070 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:21:15.014824+00:00 [info] <0.968.0> connection <0.968.0> (172.23.0.1:39086 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:21:15.151435+00:00 [info] <0.986.0> accepting AMQP connection <0.986.0> (172.23.0.1:39088 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:15.151842+00:00 [info] <0.989.0> accepting AMQP connection <0.989.0> (172.23.0.1:39104 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:15.160537+00:00 [info] <0.1003.0> accepting AMQP connection <0.1003.0> (172.23.0.1:39124 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:15.160801+00:00 [info] <0.1006.0> accepting AMQP connection <0.1006.0> (172.23.0.1:39116 -> 172.23.0.2:5672)[0m
+rabbitmq-1  | 2026-10-21 21:21:15.295267+00:00 [info] <0.1003.0> connection <0.1003.0> (172.23.0.1:39124 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:21:15.295279+00:00 [info] <0.1006.0> connection <0.1006.0> (172.23.0.1:39116 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:21:15.313396+00:00 [info] <0.989.0> connection <0.989.0> (172.23.0.1:39104 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-21 21:21:15.313411+00:00 [info] <0.986.0> connection <0.986.0> (172.23.0.1:39088 -> 172.23.0.2:5672): user 'taller' authenticated and granted access to vhost '/'[0m
